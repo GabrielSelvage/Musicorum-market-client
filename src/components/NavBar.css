@@ -1,0 +1,34 @@
+/*body{
+    background-color: black !important;
+}*/
+
+.nav-bar{
+    background-color: #262626;
+    height: 104px;
+    left: 0px;
+    mix-blend-mode: normal;
+    top: 0px;
+    width: 100%;
+}
+
+ .type{
+    position: absolute;
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: stretch;
+    height: 104px;
+}
+
+.logo {
+    background-color: transparent; 
+    height: 36px;
+    mix-blend-mode: normal;
+    object-fit: cover;
+    width: 181px;
+    z-index:999;
+    top: 50%;
+}
+

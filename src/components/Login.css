@@ -1,0 +1,94 @@
+@font-face {
+    font-family: 'Manrope';
+    src: local('Manrope'), url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap') format('woff');
+    /* other formats include: 'woff2', 'truetype, 'opentype',
+                              'embedded-opentype', and 'svg' */
+  }
+
+body{
+    background-color: white;
+    font-family: 'Manrope';
+}
+
+/* background */
+
+.background-login{
+    background-color: transparent;
+    height: 632px;
+    left: -122px;
+    mix-blend-mode: normal;
+    position: absolute;
+    top: 62px;
+    width: 528px;
+}
+
+.ellipse1{
+    background-color: transparent;
+    height: 666px;
+    left: -14px;
+    mix-blend-mode: normal;
+    position: absolute;
+    top: 90px;
+    width: 666px;
+}
+
+.ellipse2{
+    background-color: transparent;
+    height: 577px;
+    left: -124px;
+    mix-blend-mode: normal;
+    position: absolute;
+    top: -124px;
+    width: 577px;
+}
+
+/* login */
+
+.makeStyles-paper-1, .MuiTypography-h5{
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: flex-end;
+	align-items: baseline;
+	align-content: stretch;
+    font-family: 'Manrope', sans-serif;
+
+}
+
+/* cadeado */
+
+.makeStyles-avatar-2 {
+    background-color: #00A693 !important;
+}
+
+.MuiTypography-h5{
+    background-color: transparent;
+    height: auto;
+    left: 31px;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    mix-blend-mode: normal;
+    text-align: left;
+    top: 28px;
+    width: 57px;
+    font-family: "manrope" !important;
+    float: left !important;
+}
+
+/* button */
+
+.MuiButton-root, .MuiButton-contained, .makeStyles-submit-4, .MuiButton-fullWidth{
+    background-color: #00A693 !important;
+    border-radius: 8px;
+    cursor: pointer;
+    height: 48px;
+    left: calc(50.00% - 196px);
+    mix-blend-mode: normal;
+    pointer-events: auto;
+    position: absolute;
+    top: calc(50.00% + 46px);
+    transition: all 0.2s ease;
+    width: 392px;
+    font-family: "manrope" !important;
+    color: white !important;
+}
