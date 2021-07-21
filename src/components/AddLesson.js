@@ -1,6 +1,7 @@
 import React from "react";
 import { AddLesson, uploadFile } from "../api";
 import { toast } from "react-toastify";
+import CreateTags from "../components/CreateTags";
 
 class addLesson extends React.Component {
   state = {
@@ -64,6 +65,7 @@ class addLesson extends React.Component {
           <label>Image</label>
           <input type="file" name="image" onChange={this.handleChangeFile} />
           <button type="submit">Create</button>
+        <CreateTags />
         </form>
       </>
     );
