@@ -1,34 +1,106 @@
-/*body{
-    background-color: black !important;
-}*/
-
-.nav-bar{
-    background-color: #262626;
-    height: 104px;
-    left: 0px;
-    mix-blend-mode: normal;
-    top: 0px;
-    width: 100%;
+body{
+    font-family: "Manrope";
 }
 
- .type{
-    position: absolute;
+@font-face {
+    font-family: "Manrope";
+    src: url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+}
+
+.nav-new{
+    height: 104px;
     display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
-	justify-content: center;
+	justify-content: space-between;
 	align-items: center;
-	align-content: stretch;
-    height: 104px;
+	align-content: space-between;
 }
 
-.logo {
-    background-color: transparent; 
-    height: 36px;
-    mix-blend-mode: normal;
-    object-fit: cover;
-    width: 181px;
-    z-index:999;
-    top: 50%;
+.container{
+    width: 99.9% !important;
+    margin-top: -10px;
 }
 
+.MuiSvgIcon-root{
+    color: #fff;
+    font-size: 30px !important;
+}
+
+.text-nav{
+    color: #fff !important;
+    margin-left: 40px;
+}
+
+#basic-nav-dropdown{
+    color: #fff !important;
+    margin-left: 20px;
+    margin-right: -60px;
+}
+
+.dropdown-menu, .show{
+    background-color: #262626 !important;
+}
+
+.drop-text{
+    margin-left: 0px;
+}
+
+.dropdown-item.active, .dropdown-item:active {
+    background-color: #00a692;
+}
+
+.drop-text:hover{
+    background-color: #3b3b3bb2 !important;
+}
+
+.search{
+    border: none;
+}
+
+.mr-sm-2, .form-control {
+    width: 380px;
+    height: 42px;
+    color: white;
+    border-radius: 20px;
+}
+
+.mr-sm-2{
+    margin-left: 150px;
+    background-color: #3b3b3bb2;
+    margin-top: 20px;
+}
+
+.mr-sm-2:focus{
+    outline-style: none;
+    outline-color: white;
+    border: white;
+    background-color: #3b3b3bb2;
+    text-align: center;
+    color: white;
+}
+
+.mr-sm-2:active{
+    outline-style: none;
+}
+
+.mr-sm-2::placeholder{
+    text-align: center;
+}
+
+.lupa{
+    margin-top: -65px;
+    margin-right: 150px;
+}
+
+.logo{
+    width: 100%;
+}
+
+.a-logo{
+    width: 16%;
+}
+
+.buy-car{
+    margin-right: 20px;
+}

@@ -1,9 +1,9 @@
 import "./App.css";
-import Home from "./components/Home";
+import { Home } from "./components/Home";
 import AllLessons from "./components/AllLessons";
-import AllInstruments from "./components/AllInstruments";
+import { AllInstruments } from "./components/AllInstruments";
 //import AddClasses from "./components/AddProject";
-import Navbar from "./components/Navbar";
+import { BootstrapNavbar } from './components/NavBar';
 // import ClassesDetails from "./components/ProjectDetails";
 // import UpdateClasses from "./components/UpdateProject";
 import Signup from "./components/Signup";
@@ -28,7 +28,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <ToastContainer />
-        <Navbar loggedInUser={this.state.loggedInUser} />
+        <BootstrapNavbar loggedInUser={this.state.loggedInUser} />
         <Switch>
           <Route exact path={["/", "/home"]} component={Home} />
           <Route exact path={["/", "/lessons"]} component={AllLessons} />
