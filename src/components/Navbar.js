@@ -8,11 +8,11 @@ import {
   } from "react-router-dom";
   import { Navbar,Nav,NavDropdown,Form,FormControl,/*Button*/} from 'react-bootstrap'
   import { Home } from './Home';
-  import { AllInstruments } from './AllInstruments';
-  import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined';
-  import PermIdentityIcon from '@material-ui/icons/PermIdentity';
+  import { AllLessons } from './AllLessons';
+  import { Instruments } from './Instruments';
   import SearchIcon from '@material-ui/icons/Search';
-  import AllLessons from './AllLessons';
+  import { User } from 'react-feather';
+  import { ShoppingCart } from 'react-feather';
   import './NavBar.css';
 
 
@@ -37,14 +37,14 @@ export const BootstrapNavbar = () => {
                                     <NavDropdown.Item className="text-nav drop-text" href="#action/3.4">More Instruments</NavDropdown.Item>
                                 </NavDropdown>
                                 </Nav>
-                                <Form inline className="search">
+                                <Form inline >
                                 {/* <Button variant="outline-success">Search</Button> */}
                                 <FormControl type="text" placeholder="What do you want to learn today?" className="mr-sm-2"/>
                                         <SearchIcon className="lupa" />
                                 </Form>
                             </Navbar.Collapse>
-                            <ShoppingCartOutlinedIcon className="buy-car"/>
-                            <PermIdentityIcon />
+                            <ShoppingCart className="buy-car"/>
+                            <User className="login-user"/>
                           </div>
                         </Navbar>
                         <br />
@@ -56,7 +56,7 @@ export const BootstrapNavbar = () => {
                                 <AllLessons />
                             </Route>
                             <Route path="/contact-us">
-                                <AllInstruments/>
+                                <Instruments/>
                             </Route>
                         </Switch>
                     </Router>

@@ -1,7 +1,7 @@
 import "./App.css";
 import { Home } from "./components/Home";
-import AllLessons from "./components/AllLessons";
-import { AllInstruments } from "./components/AllInstruments";
+import { AllLessons } from "./components/AllLessons";
+import { Instruments } from "./components/Instruments";
 //import AddClasses from "./components/AddProject";
 import { BootstrapNavbar } from './components/NavBar';
 // import ClassesDetails from "./components/ProjectDetails";
@@ -30,9 +30,9 @@ class App extends React.Component {
         <ToastContainer />
         <BootstrapNavbar loggedInUser={this.state.loggedInUser} />
         <Switch>
-          <Route exact path={["/", "/home"]} component={Home} />
-          <Route exact path={["/", "/lessons"]} component={AllLessons} />
-          <Route exact path={["/", "/instruments"]} component={AllInstruments} />
+          <Route exact path={["/", "/home"]} /*component={Home}*/ />
+          {/* <Route exact path={["/", "/lessons"]} component={AllLessons} /> */}
+          <Route exact path={["/", "/instruments"]} component={Instruments} />
           {/* <Route exact path="/projects/add" component={AddProject} />
           <Route exact path="/projects/:id" component={ProjectDetails} />
           <Route exact path="/projects/:id/edit" component={UpdateProject} /> */}

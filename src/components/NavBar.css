@@ -24,23 +24,39 @@ body{
 
 .MuiSvgIcon-root{
     color: #fff;
-    font-size: 30px !important;
+    font-size: 25px !important;
 }
 
-.text-nav{
+.text-nav, .nav-link{
     color: #fff !important;
     margin-left: 40px;
+}
+
+.text-nav:hover{
+    transform: scale(1.1);
+    color: #00a692 !important;
 }
 
 #basic-nav-dropdown{
     color: #fff !important;
     margin-left: 20px;
     margin-right: -60px;
+    font-size: 16px;
+}
+
+#basic-nav-dropdown:hover{
+    transform: scale(1.1);
+    color: #00a692 !important;
+}
+
+.dropdown-toggle::after, .nav-link::after{
+    display: none;
 }
 
 .dropdown-menu, .show{
     background-color: #262626 !important;
 }
+
 
 .drop-text{
     margin-left: 0px;
@@ -50,14 +66,15 @@ body{
     background-color: #00a692;
 }
 
-.drop-text:hover{
+.drop-text:hover, .drop-text:hover, .dropdown-item:hover{
     background-color: #3b3b3bb2 !important;
+    width: 92%;
+    margin-left: 7.5px;
 }
 
 .search{
-    border: none;
+    border-style: none;
 }
-
 .mr-sm-2, .form-control {
     width: 380px;
     height: 42px;
@@ -66,15 +83,29 @@ body{
 }
 
 .mr-sm-2{
-    margin-left: 150px;
+    margin-left: 200px;
     background-color: #3b3b3bb2;
-    margin-top: 20px;
+}
+
+.mr-sm-2:hover{
+    border: 1px solid #00a692;
+}
+/* 
+input {
+    border: none !important
+} */
+
+input:focus {
+    box-shadow: none !important;
+}
+
+.form-control:focus{
+    border: #fff;
+    box-shadow: #00a692 !important;
 }
 
 .mr-sm-2:focus{
-    outline-style: none;
-    outline-color: white;
-    border: white;
+    border: 1px solid #00a692;
     background-color: #3b3b3bb2;
     text-align: center;
     color: white;
@@ -89,12 +120,16 @@ body{
 }
 
 .lupa{
-    margin-top: -65px;
-    margin-right: 150px;
+    margin-right: 70px;
+    position: absolute;
 }
 
 .logo{
     width: 100%;
+}
+
+.logo:hover{
+    transform: scale(1.1);
 }
 
 .a-logo{
@@ -102,5 +137,22 @@ body{
 }
 
 .buy-car{
+    color: white;
     margin-right: 20px;
+    size: 12px;
+}
+
+.buy-car:hover{
+    transform: scale(1.1);
+    color: #00a692;
+}
+
+.login-user{
+    color: white;
+    font-size: 30px !important;
+}
+
+.login-user:hover{
+    transform: scale(1.1);
+    color: #00a692;
 }

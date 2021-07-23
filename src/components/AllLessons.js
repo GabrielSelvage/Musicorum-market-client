@@ -1,11 +1,5 @@
 import React from 'react';
 
-function AllLessons(){
-    return (
-    <>
-        <h2>All Lessons Page</h2>
-    </>
-    )
+export function AllLessons() {
+    return <h1>AllLessons Page</h1>
 }
-
-export default AllLessons;

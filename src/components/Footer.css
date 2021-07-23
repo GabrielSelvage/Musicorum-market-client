@@ -1,0 +1,384 @@
+body{
+    margin: 0; 
+    padding: 0;
+    background: #262626;
+    z-index: 999;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+a:hover{
+    color: #00a692;
+}
+
+.footer {
+    background-color: #262626;
+    height: 20vh;
+    margin: 0px;
+    min-height: 331px;
+    min-width: 1220px;
+    mix-blend-mode: normal;
+    overflow: hidden;
+    overflow-x: hidden;
+    position: relative;
+    width: 100%;
+  }
+
+.footer-title{
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+  
+.about-us-title {
+    background-color: transparent;
+    height: auto;
+    left: 0px;
+    letter-spacing: 0.00px;
+    line-height: 40px;
+    mix-blend-mode: normal;
+    position: absolute;
+    text-align: left;
+    top: 0px;
+    white-space: nowrap;
+    width: calc(100.00% - 6px);
+  }
+  .footer .about-us-subtitle{
+    background-color: transparent;
+    height: auto;
+    left: 0px;
+    letter-spacing: 0.00px;
+    line-height: 24px;
+    mix-blend-mode: normal;
+    position: absolute;
+    text-align: left;
+    top: 40px;
+    white-space: nowrap;
+    width: calc(100.00% - 8px);
+  }
+  .footer .affiliates-QxQr1H {
+    background-color: transparent;
+    height: auto;
+    left: 0px;
+    letter-spacing: 0.00px;
+    line-height: 24px;
+    mix-blend-mode: normal;
+    position: absolute;
+    text-align: left;
+    top: 88px;
+    white-space: nowrap;
+    width: calc(100.00% - 9px);
+  }
+  .footer .categorias-footer-OpYFEQ {
+    background-color: transparent;
+    height: 112px;
+    left: calc(50.00% - 355px);
+    mix-blend-mode: normal;
+    position: absolute;
+    top: calc(50.00% - 122px);
+    width: 709px;
+  }
+  .footer .drums-ucallr {
+    background-color: transparent;
+    height: auto;
+    left: 0px;
+    letter-spacing: 0.00px;
+    line-height: 24px;
+    mix-blend-mode: normal;
+    position: absolute;
+    text-align: left;
+    top: 64px;
+    white-space: nowrap;
+    width: calc(100.00% - 25px);
+  }
+  .footer .facebook-icon-dJH0wx {
+    background-color: transparent;
+    height: 16px;
+    left: calc(50.00% + 32px);
+    position: absolute;
+    top: calc(50.00% - 8px);
+    width: 16px;
+  }
+  .footer .facebook-icon-footer-OTbdFk {
+    background-color: transparent;
+    height: 16px;
+    left: calc(50.00% - 8px);
+    mix-blend-mode: normal;
+    position: absolute;
+    top: calc(50.00% - 8px);
+    width: 16px;
+  }
+  .footer-background{
+    background-color: #262626;
+    bottom: 0px;
+    height: 331px;
+    left: 0px;
+    mix-blend-mode: normal;
+    position: absolute;
+    width: 100%;
+  }
+  .footer .footer-icons-group-GWI0ft {
+    background-color: transparent;
+    height: 16px;
+    left: 0px;
+    position: relative;
+    top: 0px;
+    width: 96px;
+  }
+  .footer .for-students-SiBJct {
+    background-color: transparent;
+    height: auto;
+    left: 0px;
+    letter-spacing: 0.00px;
+    line-height: 40px;
+    mix-blend-mode: normal;
+    position: absolute;
+    text-align: left;
+    top: 0px;
+    white-space: nowrap;
+    width: calc(100.00% - 4px);
+  }
+  .footer .for-teachers-FhKgCF {
+    background-color: transparent;
+    height: auto;
+    left: 0px;
+    letter-spacing: 0.00px;
+    line-height: 40px;
+    mix-blend-mode: normal;
+    position: absolute;
+    text-align: left;
+    top: 0px;
+    white-space: nowrap;
+    width: calc(100.00% - 15px);
+  }
+  .footer .frame-footer-icons-OpYFEQ {
+    background-color: transparent;
+    height: 16px;
+    left: calc(50.00% - 48px);
+    mix-blend-mode: normal;
+    position: absolute;
+    top: calc(50.00% + 62px);
+    width: 96px;
+  }
+  .footer .gift-card-SiBJct {
+    background-color: transparent;
+    height: auto;
+    left: 0px;
+    letter-spacing: 0.00px;
+    line-height: 24px;
+    mix-blend-mode: normal;
+    position: absolute;
+    text-align: left;
+    top: 64px;
+    white-space: nowrap;
+    width: calc(100.00% - 13px);
+  }
+  .footer .group-204-D6atBk {
+    background-color: transparent;
+    height: 112px;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: calc(100.00% - 623px);
+  }
+  .footer .group-205-D6atBk {
+    background-color: transparent;
+    height: 112px;
+    left: 186px;
+    position: absolute;
+    top: 0px;
+    width: calc(100.00% - 557px);
+  }
+  .footer .group-206-D6atBk {
+    background-color: transparent;
+    height: 88px;
+    left: 407px;
+    position: absolute;
+    top: 0px;
+    width: calc(100.00% - 595px);
+  }
+  .footer .group-207-D6atBk {
+    background-color: transparent;
+    height: 112px;
+    left: 579px;
+    position: absolute;
+    top: 0px;
+    width: calc(100.00% - 571px);
+  }
+  .footer .guitar-ucallr {
+    background-color: transparent;
+    height: auto;
+    left: 0px;
+    letter-spacing: 0.00px;
+    line-height: 24px;
+    mix-blend-mode: normal;
+    position: absolute;
+    text-align: left;
+    top: 40px;
+    white-space: nowrap;
+    width: calc(100.00% - 25px);
+  }
+  .footer .how-to-sell-FhKgCF {
+    background-color: transparent;
+    height: auto;
+    left: 0px;
+    letter-spacing: 0.00px;
+    line-height: 24px;
+    mix-blend-mode: normal;
+    position: absolute;
+    text-align: left;
+    top: 88px;
+    white-space: nowrap;
+    width: calc(100.00% - 23px);
+  }
+  .footer .instagram-icon-dJH0wx {
+    background-color: transparent;
+    height: 15px;
+    left: calc(50.00% - 7px);
+    position: absolute;
+    top: calc(50.00% - 7px);
+    width: 15px;
+  }
+  .footer .instagram-icon-footer-S0S0jP {
+    background-color: transparent;
+    height: 15px;
+    left: calc(50.00% - 8px);
+    mix-blend-mode: normal;
+    position: absolute;
+    top: calc(50.00% - 8px);
+    width: 16px;
+  }
+  .footer .musicorum-2021-VeQGn1 {
+    background-color: transparent;
+    color: #ffffffb2;
+    font-family: var(--font-family-manrope);
+    font-size: var(--font-size-s);
+    font-style: normal;
+    font-weight: 400;
+    height: auto;
+    left: calc(50.00% - 51px);
+    letter-spacing: 0.00px;
+    line-height: 16px;
+    mix-blend-mode: normal;
+    position: absolute;
+    text-align: left;
+    top: calc(50.00% - 8px);
+    white-space: nowrap;
+    width: auto;
+  }
+  .footer .piano-ucallr {
+    background-color: transparent;
+    height: auto;
+    left: 0px;
+    letter-spacing: 0.00px;
+    line-height: 24px;
+    mix-blend-mode: normal;
+    position: absolute;
+    text-align: left;
+    top: 88px;
+    white-space: nowrap;
+    width: calc(100.00% - 26px);
+  }
+  .footer .press-QxQr1H {
+    background-color: transparent;
+    height: auto;
+    left: 0px;
+    letter-spacing: 0.00px;
+    line-height: 24px;
+    mix-blend-mode: normal;
+    position: absolute;
+    text-align: left;
+    top: 64px;
+    white-space: nowrap;
+    width: calc(100.00% - 12px);
+  }
+  .registo-marca-footer {
+    background-color: transparent;
+    height: 16px;
+    left: calc(50.00% - 51px);
+    mix-blend-mode: normal;
+    position: absolute;
+    top: calc(50.00% + 108px);
+    width: 102px;
+  }
+  .footer .sellers-faq-FhKgCF {
+    background-color: transparent;
+    height: auto;
+    left: 0px;
+    letter-spacing: 0.00px;
+    line-height: 24px;
+    mix-blend-mode: normal;
+    position: absolute;
+    text-align: left;
+    top: 64px;
+    white-space: nowrap;
+    width: calc(100.00% - 23px);
+  }
+  .footer .students-faq-SiBJct {
+    background-color: transparent;
+    height: auto;
+    left: 0px;
+    letter-spacing: 0.00px;
+    line-height: 24px;
+    mix-blend-mode: normal;
+    position: absolute;
+    text-align: left;
+    top: 40px;
+    white-space: nowrap;
+    width: calc(100.00% - 8px);
+  }
+  .footer .terms-and-conditions-FhKgCF {
+    background-color: transparent;
+    height: auto;
+    left: 0px;
+    letter-spacing: 0.00px;
+    line-height: 24px;
+    mix-blend-mode: normal;
+    position: absolute;
+    text-align: left;
+    top: 40px;
+    white-space: nowrap;
+    width: calc(100.00% - 6px);
+  }
+  .footer .top-categories-ucallr {
+    background-color: transparent;
+    height: auto;
+    left: 0px;
+    letter-spacing: 0.00px;
+    line-height: 40px;
+    mix-blend-mode: normal;
+    position: absolute;
+    text-align: left;
+    top: 0px;
+    white-space: nowrap;
+    width: calc(100.00% - 6px);
+  }
+  .footer .twiiter-icon-dJH0wx {
+    background-color: transparent;
+    height: 14px;
+    left: calc(50.00% - 48px);
+    position: absolute;
+    top: calc(50.00% - 7px);
+    width: 17px;
+  }
+  .footer .twitter-icon-footer-7qkrV0 {
+    background-color: transparent;
+    height: 14px;
+    left: calc(50.00% - 9px);
+    mix-blend-mode: normal;
+    position: absolute;
+    top: calc(50.00% - 7px);
+    width: 18px;
+  }
+  
+  .twitter-icon:hover, .instagram-icon:hover, .facebook-icon:hover{
+    transform: scale(1.1);
+    color: #00a692;
+  }
+
+  .footer-zindex{
+    z-index: 999;
+  }
