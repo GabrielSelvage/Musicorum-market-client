@@ -3,6 +3,7 @@ import "./Footer.css";
 import TwitterIcon from '@material-ui/icons/Twitter';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import FacebookIcon from '@material-ui/icons/Facebook';
+import { NavLink } from "react-router-dom";
 
 export const Footer = () => {
     return (

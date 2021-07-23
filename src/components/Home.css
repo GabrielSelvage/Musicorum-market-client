@@ -24,6 +24,11 @@ form{
 	align-content: stretch;
 }
 
+.row{
+  width: 103% !important;
+  overflow: hidden;
+}
+
 .background-home{
     position: fixed;
     right: 0;

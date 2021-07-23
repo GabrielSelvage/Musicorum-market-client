@@ -7,6 +7,10 @@ body{
     src: url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 }
 
+.row{
+    min-height: 600px !important;
+}
+
 .nav-new{
     height: 104px;
     display: flex;
@@ -32,6 +36,10 @@ body{
     margin-left: 40px;
 }
 
+.lessons{
+    margin-top: 10px;
+}
+
 .text-nav:hover{
     transform: scale(1.1);
     color: #00a692 !important;
@@ -40,7 +48,7 @@ body{
 #basic-nav-dropdown{
     color: #fff !important;
     margin-left: 20px;
-    margin-right: -60px;
+    margin-right: -80px;
     font-size: 16px;
 }
 
@@ -49,14 +57,31 @@ body{
     color: #00a692 !important;
 }
 
+.dropdown-toggle, .nav-link{
+    margin-top: 3px;
+}
+
 .dropdown-toggle::after, .nav-link::after{
     display: none;
+    margin-top: 3px;
 }
 
 .dropdown-menu, .show{
     background-color: #262626 !important;
+    z-index: 1;
 }
 
+.nav-item, .show .dropdown{
+    z-index: 1;
+}
+
+.dropdown-menu{
+    z-index: 1;
+}
+
+.nav-item, .dropdown{
+    background-color: transparent !important;
+}
 
 .drop-text{
     margin-left: 0px;
@@ -66,7 +91,7 @@ body{
     background-color: #00a692;
 }
 
-.drop-text:hover, .drop-text:hover, .dropdown-item:hover{
+.drop-text:hover, .dropdown-item:hover{
     background-color: #3b3b3bb2 !important;
     width: 92%;
     margin-left: 7.5px;
@@ -85,6 +110,7 @@ body{
 .mr-sm-2{
     margin-left: 200px;
     background-color: #3b3b3bb2;
+    margin-right: -85px;
 }
 
 .mr-sm-2:hover{
@@ -120,7 +146,7 @@ input:focus {
 }
 
 .lupa{
-    margin-right: 70px;
+    margin-right: 40px;
     position: absolute;
 }
 
@@ -138,8 +164,8 @@ input:focus {
 
 .buy-car{
     color: white;
-    margin-right: 20px;
     size: 12px;
+    margin-right: 25px;
 }
 
 .buy-car:hover{
@@ -150,6 +176,7 @@ input:focus {
 .login-user{
     color: white;
     font-size: 30px !important;
+    margin-right: 0px;
 }
 
 .login-user:hover{

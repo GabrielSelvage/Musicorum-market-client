@@ -2,10 +2,10 @@ import "./App.css";
 import { Home } from "./components/Home";
 import { AllLessons } from "./components/AllLessons";
 import { Instruments } from "./components/Instruments";
-//import AddClasses from "./components/AddProject";
+//import AddLessons from "./components/AddProject";
 import { BootstrapNavbar } from './components/NavBar';
-// import ClassesDetails from "./components/ProjectDetails";
-// import UpdateClasses from "./components/UpdateProject";
+// import LessonsDetails from "./components/LessonDetails";
+// import UpdateLessons from "./components/UpdateLesson";
 import Signup from "./components/Signup";
 import Login from "./components/Login";
 import "react-toastify/dist/ReactToastify.css";
@@ -13,6 +13,8 @@ import { ToastContainer } from "react-toastify";
 import { Route, Switch } from "react-router-dom";
 import React from "react";
 import Tags from "./components/CreateTags";
+import { SearchPage } from "./components/SearchPage";
+import { ShoppingCar } from "./components/ShoppingCar";
 
 
 class App extends React.Component {
@@ -30,13 +32,16 @@ class App extends React.Component {
         <ToastContainer />
         <BootstrapNavbar loggedInUser={this.state.loggedInUser} />
         <Switch>
-          <Route exact path={["/", "/home"]} /*component={Home}*/ />
-          {/* <Route exact path={["/", "/lessons"]} component={AllLessons} /> */}
-          <Route exact path={["/", "/instruments"]} component={Instruments} />
-          {/* <Route exact path="/projects/add" component={AddProject} />
-          <Route exact path="/projects/:id" component={ProjectDetails} />
-          <Route exact path="/projects/:id/edit" component={UpdateProject} /> */}
+          <Route exact path={["/", "/home"]} component={Home} />
+          <Route exact path="/lessons" component={AllLessons} />
+          <Route exact path="/instruments" component={Instruments} />
+          {/* <Route exact path="/lessons/add" component={AddLesson} />
+          <Route exact path="/lessons/:id" component={LessonDetails} />
+          <Route exact path="/lessons/:id/edit" component={UpdateLesson} /> */}
+          <Route exact path="/" component={Login}/>
           <Route exact path="/signup" component={Signup} />
+          <Route exact path="/search" component={SearchPage} />
+          <Route exact path="/shoppingCar" component={ShoppingCar}/>
           <Route
             exact
             path="/login"

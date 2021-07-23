@@ -28,8 +28,16 @@ export const uploadFile = (uploadData) => {
   return axios.post(`${baseURL}/upload`, uploadData);
 };
 
-export const getAllInstruments = () => {
+export const getInstruments = () => {
   return axios.get(`${baseURL}/instruments`);
+};
+
+export const getShoppingCar = () => {
+  return axios.get(`${baseURL}/shoppingcar`);
+};
+
+export const getSearch = () => {
+  return axios.get(`${baseURL}/search`);
 };
 
 
