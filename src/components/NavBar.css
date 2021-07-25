@@ -63,7 +63,6 @@ body{
 
 .dropdown-toggle::after, .nav-link::after{
     display: none;
-    margin-top: 3px;
 }
 
 .dropdown-menu, .show{

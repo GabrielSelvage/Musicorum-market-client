@@ -30,20 +30,16 @@ const CreateTags = () => {
     }
   }
   return (
-    <div>
-      {/* <header className="header">
-      </header> */}
+    <div className="container">
       <form onSubmit={submitHandler}>
         <TagsInput 
-          label="Tags"
+          placeholder="Add tag"
           id="tags"
           name="tags"
-          placeholder="Add tag"
           onChange={changeHandler}
           error={errors.tags}
           defaultTags={tags}
         />
-        <button type="submit">Submit</button>
       </form>
     </div>
   );

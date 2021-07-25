@@ -78,7 +78,7 @@ body{
 /* button */
 
 .MuiButton-root, .MuiButton-contained, .makeStyles-submit-4, .MuiButton-fullWidth{
-    background-color: #00A693 !important;
+    background-color: blue !important;
     border-radius: 8px;
     cursor: pointer;
     height: 48px;

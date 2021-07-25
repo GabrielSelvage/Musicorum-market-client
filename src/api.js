@@ -9,7 +9,7 @@ export const getAllLessons = () => {
 };
 
 export const addLesson = (lesson) => {
-  return axios.post(`${baseURL}/lessons`, lesson);
+  return axios.post(`${baseURL}/add-lesson`, lesson);
 };
 
 export const getLesson = (lessonId) => {
