@@ -1,5 +1,6 @@
-body{
+.body-navbar{
     font-family: "Manrope";
+    background-color: #262626;
 }
 
 @font-face {
@@ -7,11 +8,11 @@ body{
     src: url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 }
 
-.row{
+.body-navbar .row{
     min-height: 600px !important;
 }
 
-.nav-new{
+.body-navbar .nav-new{
     height: 104px;
     display: flex;
 	flex-direction: row;
@@ -21,164 +22,169 @@ body{
 	align-content: space-between;
 }
 
-.container{
+.body-navbar .container{
     width: 99.9% !important;
     margin-top: -10px;
 }
 
-.MuiSvgIcon-root{
+.body-navbar .MuiSvgIcon-root{
     color: #fff;
     font-size: 25px !important;
 }
 
-.text-nav, .nav-link{
+.body-navbar .text-nav, .body-navbar .nav-link{
     color: #fff !important;
     margin-left: 40px;
+    text-decoration: none;
 }
 
-.lessons{
+.body-navbar .lessons{
     margin-top: 10px;
 }
 
-.text-nav:hover{
+.body-navbar .text-nav:hover{
     transform: scale(1.1);
     color: #00a692 !important;
 }
 
-#basic-nav-dropdown{
+.body-navbar #basic-nav-dropdown{
     color: #fff !important;
     margin-left: 20px;
     margin-right: -80px;
     font-size: 16px;
 }
 
-#basic-nav-dropdown:hover{
+.body-navbar #basic-nav-dropdown:hover{
     transform: scale(1.1);
     color: #00a692 !important;
 }
 
-.dropdown-toggle, .nav-link{
+.body-navbar .dropdown-toggle, .body-navbar .nav-link{
     margin-top: 3px;
 }
 
-.dropdown-toggle::after, .nav-link::after{
+.body-navbar .dropdown-toggle::after, .body-navbar .nav-link::after{
     display: none;
 }
 
-.dropdown-menu, .show{
+.body-navbar .dropdown-menu, .body-navbar .show{
     background-color: #262626 !important;
     z-index: 1;
 }
 
-.nav-item, .show .dropdown{
+.body-navbar .nav-item, .body-navbar .show .dropdown{
     z-index: 1;
 }
 
-.dropdown-menu{
+.body-navbar .dropdown-menu{
     z-index: 1;
 }
 
-.nav-item, .dropdown{
+.body-navbar .nav-item, .body-navbar .dropdown{
     background-color: transparent !important;
 }
 
-.drop-text{
+.body-navbar .drop-text{
     margin-left: 0px;
 }
 
-.dropdown-item.active, .dropdown-item:active {
+.body-navbar .dropdown-item.active, .body-navbar .dropdown-item:active {
     background-color: #00a692;
 }
 
-.drop-text:hover, .dropdown-item:hover{
+.body-navbar .drop-text:hover, .body-navbar .dropdown-item:hover{
     background-color: #3b3b3bb2 !important;
     width: 92%;
     margin-left: 7.5px;
 }
 
-.search{
+.body-navbar .search{
     border-style: none;
+    margin-top: 20px;
+    margin-left: 240px;
 }
-.mr-sm-2, .form-control {
+
+.body-navbar .mr-sm-2, .body-navbar  .form-control {
     width: 380px;
     height: 42px;
     color: white;
     border-radius: 20px;
 }
 
-.mr-sm-2{
-    margin-left: 200px;
+.body-navbar .mr-sm-2{
     background-color: #3b3b3bb2;
     margin-right: -85px;
 }
 
-.mr-sm-2:hover{
+.body-navbar input {
+    padding-left: 60px;
+}
+
+.body-navbar .mr-sm-2:hover{
     border: 1px solid #00a692;
 }
-/* 
-input {
-    border: none !important
-} */
 
-input:focus {
+.body-navbar input:focus {
     box-shadow: none !important;
+    border: 1px solid #00a692 !important;
 }
 
-.form-control:focus{
+.body-navbar .form-control:focus{
     border: #fff;
     box-shadow: #00a692 !important;
 }
 
-.mr-sm-2:focus{
+.body-navbar .body-navbar .mr-sm-2:focus{
     border: 1px solid #00a692;
     background-color: #3b3b3bb2;
     text-align: center;
     color: white;
 }
 
-.mr-sm-2:active{
+.body-navbar .mr-sm-2:active{
     outline-style: none;
 }
 
-.mr-sm-2::placeholder{
+.body-navbar .mr-sm-2::placeholder{
     text-align: center;
+    margin-left: 30px;
 }
 
-.lupa{
-    margin-right: 40px;
-    position: absolute;
+.body-navbar .MuiSvgIcon-root {
+    margin-top: -60px;
+    margin-right: 230px;
 }
 
-.logo{
+.body-navbar .logo{
     width: 100%;
 }
 
-.logo:hover{
+.body-navbar .logo:hover{
     transform: scale(1.1);
 }
 
-.a-logo{
+.body-navbar .a-logo{
     width: 16%;
 }
 
-.buy-car{
+.body-navbar .buy-car{
     color: white;
     size: 12px;
     margin-right: 25px;
 }
 
-.buy-car:hover{
+.body-navbar .buy-car:hover{
     transform: scale(1.1);
     color: #00a692;
 }
 
-.login-user{
+.body-navbar .login-user{
     color: white;
     font-size: 30px !important;
     margin-right: 0px;
 }
 
-.login-user:hover{
+.body-navbar .login-user:hover{
     transform: scale(1.1);
     color: #00a692;
 }

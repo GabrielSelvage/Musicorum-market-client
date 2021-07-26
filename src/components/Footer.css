@@ -1,20 +1,20 @@
-body{
+.body-footer{
     margin: 0; 
     padding: 0;
     background: #262626;
     z-index: 999;
 }
 
-a{
+.body-footer a{
     text-decoration: none;
     color: white;
 }
 
-a:hover{
+.body-footer a:hover{
     color: #00a692;
 }
 
-.footer {
+.body-footer .footer {
     background-color: #262626;
     height: 20vh;
     margin: 0px;
@@ -27,13 +27,13 @@ a:hover{
     width: 100%;
   }
 
-.footer-title{
+.body-footer .footer-title{
     font-size: 20px;
     font-weight: bold;
     color: white;
 }
   
-.about-us-title {
+.body-footer .about-us-title {
     background-color: transparent;
     height: auto;
     left: 0px;
@@ -46,7 +46,7 @@ a:hover{
     white-space: nowrap;
     width: calc(100.00% - 6px);
   }
-  .footer .about-us-subtitle{
+.body-footer .footer .about-us-subtitle{
     background-color: transparent;
     height: auto;
     left: 0px;
@@ -59,7 +59,7 @@ a:hover{
     white-space: nowrap;
     width: calc(100.00% - 8px);
   }
-  .footer .affiliates-QxQr1H {
+.body-footer .footer .affiliates-QxQr1H {
     background-color: transparent;
     height: auto;
     left: 0px;
@@ -72,7 +72,7 @@ a:hover{
     white-space: nowrap;
     width: calc(100.00% - 9px);
   }
-  .footer .categorias-footer-OpYFEQ {
+.body-footer .footer .categorias-footer-OpYFEQ {
     background-color: transparent;
     height: 112px;
     left: calc(50.00% - 355px);
@@ -81,7 +81,7 @@ a:hover{
     top: calc(50.00% - 122px);
     width: 709px;
   }
-  .footer .drums-ucallr {
+.body-footer .footer .drums-ucallr {
     background-color: transparent;
     height: auto;
     left: 0px;
@@ -94,7 +94,7 @@ a:hover{
     white-space: nowrap;
     width: calc(100.00% - 25px);
   }
-  .footer .facebook-icon-dJH0wx {
+.body-footer .footer .facebook-icon-dJH0wx {
     background-color: transparent;
     height: 16px;
     left: calc(50.00% + 32px);
@@ -102,7 +102,7 @@ a:hover{
     top: calc(50.00% - 8px);
     width: 16px;
   }
-  .footer .facebook-icon-footer-OTbdFk {
+.body-footer .footer .facebook-icon-footer-OTbdFk {
     background-color: transparent;
     height: 16px;
     left: calc(50.00% - 8px);
@@ -111,7 +111,7 @@ a:hover{
     top: calc(50.00% - 8px);
     width: 16px;
   }
-  .footer-background{
+.body-footer  .footer-background{
     background-color: #262626;
     bottom: 0px;
     height: 331px;
@@ -120,7 +120,7 @@ a:hover{
     position: absolute;
     width: 100%;
   }
-  .footer .footer-icons-group-GWI0ft {
+.body-footer  .footer .footer-icons-group-GWI0ft {
     background-color: transparent;
     height: 16px;
     left: 0px;
@@ -128,7 +128,7 @@ a:hover{
     top: 0px;
     width: 96px;
   }
-  .footer .for-students-SiBJct {
+.body-footer  .footer .for-students-SiBJct {
     background-color: transparent;
     height: auto;
     left: 0px;
@@ -141,7 +141,7 @@ a:hover{
     white-space: nowrap;
     width: calc(100.00% - 4px);
   }
-  .footer .for-teachers-FhKgCF {
+.body-footer .footer .for-teachers-FhKgCF {
     background-color: transparent;
     height: auto;
     left: 0px;
@@ -154,7 +154,7 @@ a:hover{
     white-space: nowrap;
     width: calc(100.00% - 15px);
   }
-  .footer .frame-footer-icons-OpYFEQ {
+.body-footer .footer .frame-footer-icons-OpYFEQ {
     background-color: transparent;
     height: 16px;
     left: calc(50.00% - 48px);
@@ -163,7 +163,7 @@ a:hover{
     top: calc(50.00% + 62px);
     width: 96px;
   }
-  .footer .gift-card-SiBJct {
+.body-footer .footer .gift-card-SiBJct {
     background-color: transparent;
     height: auto;
     left: 0px;
@@ -176,7 +176,7 @@ a:hover{
     white-space: nowrap;
     width: calc(100.00% - 13px);
   }
-  .footer .group-204-D6atBk {
+.body-footer .footer .group-204-D6atBk {
     background-color: transparent;
     height: 112px;
     left: 0px;
@@ -184,7 +184,7 @@ a:hover{
     top: 0px;
     width: calc(100.00% - 623px);
   }
-  .footer .group-205-D6atBk {
+.body-footer .footer .group-205-D6atBk {
     background-color: transparent;
     height: 112px;
     left: 186px;
@@ -192,7 +192,7 @@ a:hover{
     top: 0px;
     width: calc(100.00% - 557px);
   }
-  .footer .group-206-D6atBk {
+.body-footer .footer .group-206-D6atBk {
     background-color: transparent;
     height: 88px;
     left: 407px;
@@ -200,7 +200,7 @@ a:hover{
     top: 0px;
     width: calc(100.00% - 595px);
   }
-  .footer .group-207-D6atBk {
+.body-footer .footer .group-207-D6atBk {
     background-color: transparent;
     height: 112px;
     left: 579px;
@@ -208,7 +208,7 @@ a:hover{
     top: 0px;
     width: calc(100.00% - 571px);
   }
-  .footer .guitar-ucallr {
+.body-footer .footer .guitar-ucallr {
     background-color: transparent;
     height: auto;
     left: 0px;
@@ -221,7 +221,7 @@ a:hover{
     white-space: nowrap;
     width: calc(100.00% - 25px);
   }
-  .footer .how-to-sell-FhKgCF {
+.body-footer .footer .how-to-sell-FhKgCF {
     background-color: transparent;
     height: auto;
     left: 0px;
@@ -234,7 +234,7 @@ a:hover{
     white-space: nowrap;
     width: calc(100.00% - 23px);
   }
-  .footer .instagram-icon-dJH0wx {
+.body-footer .footer .instagram-icon-dJH0wx {
     background-color: transparent;
     height: 15px;
     left: calc(50.00% - 7px);
@@ -242,7 +242,7 @@ a:hover{
     top: calc(50.00% - 7px);
     width: 15px;
   }
-  .footer .instagram-icon-footer-S0S0jP {
+.body-footer .footer .instagram-icon-footer-S0S0jP {
     background-color: transparent;
     height: 15px;
     left: calc(50.00% - 8px);
@@ -251,7 +251,7 @@ a:hover{
     top: calc(50.00% - 8px);
     width: 16px;
   }
-  .footer .musicorum-2021-VeQGn1 {
+.body-footer .footer .musicorum-2021-VeQGn1 {
     background-color: transparent;
     color: #ffffffb2;
     font-family: var(--font-family-manrope);
@@ -269,7 +269,7 @@ a:hover{
     white-space: nowrap;
     width: auto;
   }
-  .footer .piano-ucallr {
+.body-footer .footer .piano-ucallr {
     background-color: transparent;
     height: auto;
     left: 0px;
@@ -282,7 +282,7 @@ a:hover{
     white-space: nowrap;
     width: calc(100.00% - 26px);
   }
-  .footer .press-QxQr1H {
+.body-footer .footer .press-QxQr1H {
     background-color: transparent;
     height: auto;
     left: 0px;
@@ -295,7 +295,7 @@ a:hover{
     white-space: nowrap;
     width: calc(100.00% - 12px);
   }
-  .registo-marca-footer {
+.body-footer .registo-marca-footer {
     background-color: transparent;
     height: 16px;
     left: calc(50.00% - 51px);
@@ -304,7 +304,7 @@ a:hover{
     top: calc(50.00% + 108px);
     width: 102px;
   }
-  .footer .sellers-faq-FhKgCF {
+.body-footer .footer .sellers-faq-FhKgCF {
     background-color: transparent;
     height: auto;
     left: 0px;
@@ -317,7 +317,7 @@ a:hover{
     white-space: nowrap;
     width: calc(100.00% - 23px);
   }
-  .footer .students-faq-SiBJct {
+.body-footer .footer .students-faq-SiBJct {
     background-color: transparent;
     height: auto;
     left: 0px;
@@ -330,7 +330,7 @@ a:hover{
     white-space: nowrap;
     width: calc(100.00% - 8px);
   }
-  .footer .terms-and-conditions-FhKgCF {
+.body-footer .footer .terms-and-conditions-FhKgCF {
     background-color: transparent;
     height: auto;
     left: 0px;
@@ -343,7 +343,7 @@ a:hover{
     white-space: nowrap;
     width: calc(100.00% - 6px);
   }
-  .footer .top-categories-ucallr {
+.body-footer .footer .top-categories-ucallr {
     background-color: transparent;
     height: auto;
     left: 0px;
@@ -356,7 +356,7 @@ a:hover{
     white-space: nowrap;
     width: calc(100.00% - 6px);
   }
-  .footer .twiiter-icon-dJH0wx {
+.body-footer .footer .twiiter-icon-dJH0wx {
     background-color: transparent;
     height: 14px;
     left: calc(50.00% - 48px);
@@ -364,7 +364,7 @@ a:hover{
     top: calc(50.00% - 7px);
     width: 17px;
   }
-  .footer .twitter-icon-footer-7qkrV0 {
+.body-footer .footer .twitter-icon-footer-7qkrV0 {
     background-color: transparent;
     height: 14px;
     left: calc(50.00% - 9px);
@@ -374,11 +374,11 @@ a:hover{
     width: 18px;
   }
   
-  .twitter-icon:hover, .instagram-icon:hover, .facebook-icon:hover{
+.body-footer .twitter-icon:hover, .instagram-icon:hover, .facebook-icon:hover{
     transform: scale(1.1);
     color: #00a692;
   }
 
-  .footer-zindex{
+.body-footer .footer-zindex{
     z-index: 999;
   }

@@ -5,7 +5,7 @@ import ReactPlayer from 'react-player'
 
 export const Home = () => {
     return (
-        <>
+        <div className="body-home">
             {/* <ReactPlayer playing url={"/video/video-back.mp4"} className="background-home" /> */}
             <video autoPlay="true" loop="true" src="/video/video-back.mp4" className="background-home"></video>
             <div className="home">
@@ -22,6 +22,6 @@ export const Home = () => {
             <br></br>
             <br></br>
             <Footer className="footer-zindex"/>
-        </>
+        </div>
     );
 }

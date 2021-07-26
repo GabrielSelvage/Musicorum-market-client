@@ -1,8 +1,4 @@
-body  {
-  overflow-x: hidden;
-
-}
-
 .App {
   text-align: center;
+  overflow-x: hidden;
 }

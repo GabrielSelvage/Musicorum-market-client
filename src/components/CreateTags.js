@@ -30,7 +30,7 @@ const CreateTags = () => {
     }
   }
   return (
-    <div className="container">
+    <div className="container body-tags">
       <form onSubmit={submitHandler}>
         <TagsInput 
           placeholder="Add tag"

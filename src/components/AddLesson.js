@@ -24,49 +24,51 @@ class AddLesson extends React.Component {
     });
   };
 
-  handleFormSubmit = async (event) => {
-    event.preventDefault();
+//   handleFormSubmit = async (event) => {
+//     event.preventDefault();
 
-    const uploadData = new FormData();
-    uploadData.append("image", this.state.imageURL);
+//     const uploadData = new FormData();
+//     uploadData.append("image", this.state.imageURL);
 
-    const response = await uploadFile(uploadData);
+//     const response = await uploadFile(uploadData);
 
-    const newLesson = {
-        title: this.state.title,
-        description: this.state.description,
-        price: this.state.price,
-        course: this.state.course,
-        teacher: this.state.teacher,
-        level: this.state.level,
-        tags: this.state.tags,
-        imageURL: response.data.imageURL,
-        preview: response.data.preview,
-        video: response.data.video,
-    };
+//     const newLesson = {
+//         title: this.state.title,
+//         description: this.state.description,
+//         price: this.state.price,
+//         course: this.state.course,
+//         teacher: this.state.teacher,
+//         level: this.state.level,
+//         tags: this.state.tags,
+//         imageURL: response.data.imageURL,
+//         preview: response.data.preview,
+//         video: response.data.video,
+//     };
 
-    await addLesson(newLesson);
+//     await addLesson(newLesson);
 
-    toast.success("Project created");
-    this.props.history.push("/add-lesson");
-  };
+//     toast.success("Project created");
+//     this.props.history.push("/add-lesson");
+//   };
 
-  handleChangeFile = (event) => {
-    this.setState({
-      imageURL: event.target.files[0],
-      preview: event.target.files[0],
-      video: event.target.files[0],
-    });
-  };
+//   handleChangeFile = (event) => {
+//     this.setState({
+//       imageURL: event.target.files[0],
+//       preview: event.target.files[0],
+//       video: event.target.files[0],
+//     });
+//   };
 
   render() {
     const { title, description, price , course, teacher, level, tags, imageURL, preview, video} = this.state;
     return (
+        <div className="body-addlesson">
             <div className="container pos-form">
-            <form onSubmit={this.handleFormSubmit} method="POST" enctype="multipart/form-data" className="class-form">
+            <form /*onSubmit={this.handleFormSubmit}*/ action="add-lesson" method="POST" enctype="multipart/form-data" className="class-form">
                 <input type="hidden" id="anPageName" name="page" value="upload-lesson" />
-                <div className="upload-lesson">  
-                  <h1 className="title">Profile / Upload CLass</h1>
+                <div className="upload-lesson"> 
+                <br/><br/> 
+                  <h1 className="title">Profile / Upload Lesson</h1>
                       <div className="profile">
                           <img className=" profile-avatar profile-img" src="/img/profile.jpg" alt="profile"/>
                           <div className="name-profile">Gabriel Santos</div>
@@ -77,12 +79,10 @@ class AddLesson extends React.Component {
                   <div className="words-edit">
                       <a href="#" className="title-profile smart-layers-pointers">EDIT PROFILE</a>
                       <a href="#" className="title-profile smart-layers-pointers">ACCOUNT SETTINGS</a>
-                      <a href="#" className="title-profile smart-layers-pointers">PASSWORD</a>
-                      <a href="#" className="title-profile smart-layers-pointers">SOCIAL PROFILES</a>
-                      <a href="#" className="title-profile smart-layers-pointers">EMAIL NOTIFICATIONS</a>
                       <img className="line2" src="/img/line-4@1x.png" />
-                      <a href="#" className="title-profile smart-layers-pointers">UPLOAD CLASS</a>
-                      <a href="#" className="title-profile smart-layers-pointers">EDIT CLASS</a>
+                      <a href="#" className="title-profile smart-layers-pointers">MY LESSONS</a> 
+                      <a href="#" className="title-profile smart-layers-pointers">UPLOAD LESSON</a>
+                      <a href="#" className="title-profile smart-layers-pointers">EDIT LESSON</a>
                   </div>
                 <div className="form-section">
                             <input 
@@ -122,15 +122,6 @@ class AddLesson extends React.Component {
                                 value={course}
                             />
                         <br/>
-                            <input
-                                onChange={this.handleChange}
-                                name="teacher" 
-                                placeholder="Teacher Name" 
-                                type="text" 
-                                className="rectangle-form3 border-1px-black"
-                                value={teacher}
-                            />
-                        <br/>
                                 <select 
                                     onChange={this.handleChange}
                                     name="level" 
@@ -147,10 +138,7 @@ class AddLesson extends React.Component {
                         </div>    
                             <div className="title-form">
                                 <div className="rectangle-form3 border-1px-black title-form">
-                                    <CreateTags 
-                                        onChange={this.handleChange}
-                                        value={tags} 
-                                    />
+                                    <CreateTags />
                                 </div>
                             </div>
                             <br/><br/>
@@ -167,21 +155,6 @@ class AddLesson extends React.Component {
                                         id="image" 
                                         className="input-class"
                                         value={imageURL}
-                                    />
-                                </div>
-                                <br/>
-                                <div class="input-file">
-                                    <label for="image" className="labels-form">
-                                        <img src="/img/add-class2.png" alt="add-class"/>
-                                        <span>Preview Lesson</span>
-                                    </label>
-                                    <input
-                                        onChange={this.handleChange}
-                                        type="file" 
-                                        name="preview" 
-                                        id="preview" 
-                                        className="input-class"
-                                        value={preview}
                                     />
                                 </div>
                                 <br/>
@@ -212,6 +185,7 @@ class AddLesson extends React.Component {
 
           </form>
         </div>
+    </div>
     );
   }
 }

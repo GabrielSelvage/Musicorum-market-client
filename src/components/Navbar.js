@@ -12,7 +12,7 @@ import {
 
 export const BootstrapNavbar = () => {
     return(
-        <>
+        <div className="body-navbar">
          <Navbar bg="dark" variant="dark" expand="lg" sticky="top" className="nav-new">
                 <div className="container">
                 <NavLink exact to="/" className="a-logo"><img src="/img/logo.png" alt="" className="logo" componente={Home}/></NavLink>
@@ -28,7 +28,7 @@ export const BootstrapNavbar = () => {
                         <NavDropdown.Item className="text-nav drop-text" href="/instruments">More Instruments</NavDropdown.Item>
                     </NavDropdown>
                     </Nav>
-                    <Form inline action="/search" method="GET">
+                    <Form inline action="/search" method="GET" className="search">
                     {/* <Button variant="outline-success">Search</Button> */}
                     <FormControl type="text" placeholder="What do you want to learn today?" className="mr-sm-2" as="input" />
                             <SearchIcon className="lupa" />
@@ -42,7 +42,6 @@ export const BootstrapNavbar = () => {
                 </NavLink>
                 </div>
             </Navbar>
-            <br />
-        </>
+        </div>
     )  
 }

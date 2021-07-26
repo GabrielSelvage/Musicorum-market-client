@@ -7,7 +7,7 @@ import { NavLink } from "react-router-dom";
 
 export const Footer = () => {
     return (
-        <div>
+        <div className="body-footer">
             <input type="hidden" id="anPageName" name="page" value="footer" />
             <div class="footer">
             <div class="footer-background"></div>

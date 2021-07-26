@@ -1,8 +1,8 @@
-
 @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
 @import url("https://fonts.googleapis.com/css?family=Manrope:400,700,600|Playfair+Display:400,700,600,900");
-@import 'bootstrap/dist/css/bootstrap.min.css';
-* {
+
+.body-addlesson{
+  background-color: #fff;
   box-sizing: border-box;
 }
 
@@ -12,26 +12,27 @@
   pointer-events: auto;
   visibility: visible;
 } */
-input:focus {
+
+.body-addlesson input:focus {
   outline: none;
 }
 
-a, textarea{
+.body-addlesson a, .body-addlesson textarea{
   text-decoration: none;
   color: #262626;
 }
 
-a:active, textarea:active{
+.body-addlesson a:active, .body-addlesson textarea:active{
   text-decoration: none;
   color: #262626;
 }
 
-textarea:focus, input:focus, select:focus {
+.body-addlesson textarea:focus, .body-addlesson input:focus, .body-addlesson .body-addlessonselect:focus {
   box-shadow: 0 0 0 0;
   outline: 0;
 }
 
-button{
+.body-addlesson button{
   border:none !important;
   background-color: transparent !important;
 }
@@ -190,7 +191,7 @@ button{
 
 /* STYLE PAGE */
 
-  .upload-lesson {
+  .body-addlesson  .upload-lesson {
     margin: 0px;
     mix-blend-mode: normal;
     overflow: hidden;
@@ -198,7 +199,7 @@ button{
     /* margin-top: -900px; */
   }
 
-  .row-lesson{
+  .body-addlesson .row-lesson{
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -208,7 +209,7 @@ button{
     margin-top: -25px;
   }
   
-  .title {
+  .body-addlesson .title {
     background-color: transparent;
     color: var(--shark);
     font-family: var(--font-family-playfair_display);
@@ -225,7 +226,7 @@ button{
     width: auto;
   }
   
-  .name-profile{
+  .body-addlesson .name-profile{
     background-color: transparent;
     color: #000000;
     font-family: var(--font-family-playfair_display);
@@ -235,7 +236,7 @@ button{
     margin-left: 10px !important;
   }
   
-  .upload-lesson .title-profile {
+  .body-addlesson .upload-lesson .title-profile {
     background-color: transparent;
     height: auto;
     left: calc(50.00% - 515px);
@@ -249,11 +250,11 @@ button{
     width: auto;
   }
   
-  .upload-lesson .title-profile:hover {
+  .body-addlesson .upload-lesson .title-profile:hover {
     transform: scale(1.1);
   }
 
-  .words-edit{
+  .body-addlesson .words-edit{
       display: flex;
       flex-direction: column;
       flex-wrap: nowrap;
@@ -272,24 +273,24 @@ button{
       width: 350px;
   }
 
-  .words-edit a:hover{
+  .body-addlesson .words-edit a:hover{
     transform: scale(1.1);
     color: #262626;
   }
 
-  .words-edit a:active{
+  .body-addlesson .words-edit a:active{
     color:black;
     font-weight: bold;
   }
   
-  .upload-lesson .profile-avatar {
+  .body-addlesson .upload-lesson .profile-avatar {
     height: 42px;
     left: calc(50.00% - 516px);
     top: calc(50.00% - 646px);
     width: 42px;
   }
 
-  .profile{
+  .body-addlesson .profile{
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -299,25 +300,25 @@ button{
     margin-top: 20px;
   }
   
-  .profile-img {
+  .body-addlesson .profile-img {
     width: 42px;
     border-radius: 100%;
   }
   
-  .upload-lesson .line1 {
+  .body-addlesson .upload-lesson .line1 {
     background-color: #525252;
     height: 2px;
     width: 100%;
   }
 
-  .line2 {
+  .body-addlesson .line2 {
     height: 1px;
     margin-top: 15px;
     margin-bottom: 15px;
     width: 60%;
   }
 
-  .small-form{
+  .body-addlesson .small-form{
     display: flex;
 	flex-direction: column;
 	flex-wrap: nowrap;
@@ -326,12 +327,12 @@ button{
 	align-content: stretch;
   }
 
-  #root > div > div.container.pos-form > form > div.row-lesson > div.form-section > div:nth-child(13) > div > div > form > div > div{
+  .body-addlesson #root > div > div.container.pos-form > form > div.row-lesson > div.form-section > div:nth-child(13) > div > div > form > div > div{
     min-width: 745px !important;
     border-style: none;
   }
 
-  #tags{
+  .body-addlesson #tags{
     min-width: 700px;
     min-height: 40px;
     width: 100%;
@@ -339,47 +340,46 @@ button{
     box-sizing: border-box;
   }
 
-  #tags::placeholder{
+  .body-addlesson #tags::placeholder{
     padding-left: 10px;
   }
 
-  .tags-input{
+  .body-addlesson .tags-input{
     min-width: 100%;
   }
 
-  form .tags-input__wrapper{
+  .body-addlesson form .tags-input__wrapper{
     border: none;
     height: auto;
   } 
 
-  #root > div > div.container.pos-form > form > div.row-lesson > div.form-section > div:nth-child(13) > div > div > form{
+  .body-addlesson #root > div > div.container.pos-form > form > div.row-lesson > div.form-section > div:nth-child(13) > div > div > form{
     min-width: 745px !important;
     margin-left: -20px;
     margin-top: 10px !important;
     border-style: none;
   }
 
-  .pos-form .class-form{
+  .body-addlesson .pos-form .class-form{
     min-width: 1100px !important;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: flex-start;
     align-items: flex-start;
-    align-content: stretch;
+    align-content: stretch
   }
   
-  .form-section{
+  .body-addlesson .form-section{
     min-width: 750px;
   }
 
-  .title-form {
+  .body-addlesson .title-form {
     height: 49px;
     min-width: 750px;
   }
   
-  .rectangle-form {
-    /* background-color: var(--alabaster); */
+  .body-addlesson .rectangle-form {
     border-radius: 8px;
     height: auto;
     min-height: 40px;
@@ -388,15 +388,14 @@ button{
     padding-left: 10px;
   }
   
-  .rectangle-form input{
+  .body-addlesson .rectangle-form input{
     min-height: 35px;
     max-width: 745px;
     border: none;
     color: #262626;
   }
 
-  .rectangle-form2 {
-    /* background-color: var(--alabaster); */
+  .body-addlesson .rectangle-form2 {
     border-radius: 8px;
     min-height: 200px;
     max-width: 750px;
@@ -405,7 +404,7 @@ button{
     margin-top: 10px;
   }
 
-  .rectangle-form2 textarea{
+  .body-addlesson .rectangle-form2 textarea{
     min-height: 200px;
     border: none;
     padding-left: 10px;
@@ -414,8 +413,7 @@ button{
     width: 99%;
   } 
 
-  .rectangle-form3 {
-    /* background-color: var(--alabaster); */
+  .body-addlesson .rectangle-form3 {
     border-radius: 8px;
     height: auto;
     min-height: 40px;
@@ -425,12 +423,12 @@ button{
     font-family: var(--font-family-playfair_display);
   }
 
-  .rectangle-form3::after{
+  .body-addlesson .rectangle-form3::after{
     border: 1px solid black !important;
     background-color: transparent;
   }
 
-.rectangle-form3 > input{
+  .body-addlesson .rectangle-form3 > input{
     width: 100%;
     height: 100%;
     border: none;
@@ -438,17 +436,17 @@ button{
     padding-top: 5px;
   }
 
-  .rectangle-form3:hover{
+  .body-addlesson .rectangle-form3:hover{
     background-color: transparent;
   }
 
 /* button default */
   
-  button:hover {
+  .body-addlesson button:hover {
     transform: scale(1.1);
   }
   
-  .button-class {
+  .body-addlesson .button-class {
     background-color: #00a692 !important;
     border-radius: 6px;
     height: 40px;
@@ -456,11 +454,11 @@ button{
     width: 240px;
   }
   
-  .upload-lesson .button-class:hover {
+  .body-addlesson .upload-lesson .button-class:hover {
     transform: scale(1.1);
   }
   
-  .upload-button {
+  .body-addlesson .upload-button {
     background-color: transparent;
     color: #ffffff;
     font-family: var(--font-family-playfair_display);
@@ -471,15 +469,15 @@ button{
     padding: 7px;
   }
   
-  .border-1px-black {
+  .body-addlesson .border-1px-black {
     border: 1px solid var(--black);
   }
 
-  .input-class{
+  .body-addlesson .input-class{
     display: none;
   }
 
-  .labels-form{
+  .body-addlesson .labels-form{
     min-width: 400px;
     height: auto;
     display: flex;
@@ -490,7 +488,7 @@ button{
     align-content: stretch;
   }
 
-  .labels-form img{
+  .body-addlesson .labels-form img{
     max-width: 50px;
     display: flex;
     flex-direction: column;
@@ -501,7 +499,7 @@ button{
     margin-top: 20px;
   }
 
-  .labels-form > span{
+  .body-addlesson .labels-form > span{
     background-color: var(--alabaster);
     margin-top: 30px;
     margin-left: 10px;
@@ -517,7 +515,7 @@ button{
     align-content: stretch;
   }
 
-  .final-form{
+  .body-addlesson .final-form{
     margin-top: 30px;
     height: 350px;
     max-width: 400px;
@@ -530,7 +528,7 @@ button{
     align-content: stretch;
   }
 
-  .select-class{
+  .body-addlesson .select-class{
       font-family: var(--font-family-playfair_display);
       text-indent: 1px;
       text-overflow: '';
@@ -540,6 +538,12 @@ button{
       color: #3b3b3bb2;
       width: 100%;
   }
+
+  .body-addlesson .select-class:focus, .body-addlesson .select-class:active, .body-addlesson .select-class::after{
+    -webkit-appearance: none; 
+    -moz-appearance: none;
+    appearance: none;  
+}
 
   
 
