@@ -6,8 +6,8 @@ import { Instruments } from "./components/Instruments";
 import { BootstrapNavbar } from './components/NavBar';
 // import LessonsDetails from "./components/LessonDetails";
 // import UpdateLessons from "./components/UpdateLesson";
-import Signup from "./components/Signup";
-import Login from "./components/Login";
+import { Signup } from "./components/Signup";
+import { Login } from "./components/Login";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
 import { Route, Switch } from "react-router-dom";
@@ -38,7 +38,7 @@ class App extends React.Component {
           <Route exact path="/instruments" component={Instruments} />
           {/*<Route exact path="/lessons/:id" component={LessonDetails} />
           <Route exact path="/lessons/:id/edit" component={UpdateLesson} /> */}
-          <Route exact path="/" component={Login}/>
+          <Route exact path="/login" component={Login}/>
           <Route exact path="/signup" component={Signup} />
           <Route exact path="/search" component={SearchPage} />
           <Route exact path="/shoppingCar" component={ShoppingCar}/>

@@ -173,7 +173,7 @@ class AddLesson extends React.Component {
                                     />
                                 </div>
                             <br></br><br/>
-                            <button type="submit" className="button-class">
+                            <button type="submit">
                                 <div class="button-class">
                                     <div class="upload-button">Upload</div>
                                 </div>

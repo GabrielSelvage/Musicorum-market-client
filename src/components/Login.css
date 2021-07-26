@@ -1,18 +1,21 @@
-@font-face {
-    font-family: 'Manrope';
-    src: local('Manrope'), url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap') format('woff');
-    /* other formats include: 'woff2', 'truetype, 'opentype',
-                              'embedded-opentype', and 'svg' */
-  }
+@import url("https://fonts.googleapis.com/css?family=Manrope:400,700,600|Playfair+Display:400,700,600,900");
 
-body{
-    background-color: white;
-    font-family: 'Manrope';
+:root{
+    --font-family-manrope: "Manrope", Helvetica;
 }
 
-/* background */
 
-.background-login{
+.login{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+}
+
+.login .background-login{
     background-color: transparent;
     height: 632px;
     left: -122px;
@@ -20,6 +23,74 @@ body{
     position: absolute;
     top: 62px;
     width: 528px;
+    z-index: 1;
+}
+
+
+.login #paper_style{
+    background-color: rgba(250, 250, 250, 0.2);
+    left: calc(50.00% - 228px);
+    mix-blend-mode: normal;
+    position: absolute;
+    top: calc(50.00% - 228px);
+    width: 456px;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 1px 3px 14px 1px rgba(0,0,0,0.46);
+    font-family: var(--font-family-manrope);
+}
+
+.login #avatar_style{
+    background-color: #00a692;
+}
+
+.login .title{
+    color: #262626;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+  }
+
+.login #btn_style {
+    margin: 8px 0 !important;  
+    background-color: #00a692 !important;
+    border-radius: 6px;
+    height: 40px;
+    transition: all 0.2s ease;
+    width: 240px;
+}
+
+.login #btn_style:hover{
+    transform: scale(1.1);
+}
+
+.login .textFieldStyle{
+    margin: 5px 0 !important;
+    background-color: transparent;
+    border-radius: 8px;
+    height: 49px;
+    left: 0px;
+    mix-blend-mode: normal;
+    top: 0px;
+    width: 392px;
+}
+
+.login .PrivateNotchedOutline-legendLabelled-3 .PrivateNotchedOutline-legendNotched-4 span{
+    color: red;
+    color: #262626;
+    padding: 5px;
+}
+
+.login .MuiFormHelperText-root{
+    color: red !important;
+}
+
+.login .a-login{
+    color: #00a692;
+}
+
+.login .a-login:hover{
+    color: #00a692;
 }
 
 .ellipse1{
@@ -28,67 +99,36 @@ body{
     left: -14px;
     mix-blend-mode: normal;
     position: absolute;
-    top: 90px;
+    top: 190px;
     width: 666px;
+    z-index: 1;
 }
-
 .ellipse2{
     background-color: transparent;
     height: 577px;
     left: -124px;
     mix-blend-mode: normal;
     position: absolute;
-    top: -124px;
+    top: -24px;
     width: 577px;
+    z-index: 1;
 }
 
-/* login */
-
-.makeStyles-paper-1, .MuiTypography-h5{
+.login .row-login{
+    margin-top: 30px;
     display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
-	justify-content: flex-end;
-	align-items: baseline;
+	justify-content: space-between;
+	align-items: center;
 	align-content: stretch;
-    font-family: 'Manrope', sans-serif;
-
 }
 
-/* cadeado */
-
-.makeStyles-avatar-2 {
-    background-color: #00A693 !important;
-}
-
-.MuiTypography-h5{
-    background-color: transparent;
-    height: auto;
-    left: 31px;
-    letter-spacing: 0.00px;
-    line-height: normal;
-    mix-blend-mode: normal;
-    text-align: left;
-    top: 28px;
-    width: 57px;
-    font-family: "manrope" !important;
-    float: left !important;
-}
-
-/* button */
-
-.MuiButton-root, .MuiButton-contained, .makeStyles-submit-4, .MuiButton-fullWidth{
-    background-color: blue !important;
-    border-radius: 8px;
-    cursor: pointer;
-    height: 48px;
-    left: calc(50.00% - 196px);
-    mix-blend-mode: normal;
-    pointer-events: auto;
-    position: absolute;
-    top: calc(50.00% + 46px);
-    transition: all 0.2s ease;
-    width: 392px;
-    font-family: "manrope" !important;
-    color: white !important;
+.login .column-login{
+    display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: center;
+	align-content: stretch;
 }
