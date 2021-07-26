@@ -16,6 +16,7 @@ import Tags from "./components/CreateTags";
 import { SearchPage } from "./components/SearchPage";
 import { ShoppingCar } from "./components/ShoppingCar";
 import AddLesson from "./components/AddLesson";
+import  Profile  from "./components/Profile";
 
 
 class App extends React.Component {
@@ -38,10 +39,10 @@ class App extends React.Component {
           <Route exact path="/instruments" component={Instruments} />
           {/*<Route exact path="/lessons/:id" component={LessonDetails} />
           <Route exact path="/lessons/:id/edit" component={UpdateLesson} /> */}
-          <Route exact path="/login" component={Login}/>
           <Route exact path="/signup" component={Signup} />
           <Route exact path="/search" component={SearchPage} />
           <Route exact path="/shoppingCar" component={ShoppingCar}/>
+          <Route path="/profile" component={Profile}/>
           <Route exact path="/add-lesson" component={AddLesson} />
           <Route
             exact

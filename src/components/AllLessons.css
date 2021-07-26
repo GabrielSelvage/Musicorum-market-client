@@ -1,5 +1,118 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+@import url("https://fonts.googleapis.com/css?family=Manrope:400,700,600|Playfair+Display:400,700,600,900");
+
 .body-alllessons{
     margin: 0;
     padding: 0;
-    color: white;
+}
+
+.body-alllessons .subtitles {
+    font-weight: bolder;
+}
+
+.body-alllessons .posicion-lessons{
+    min-width: 1100px !important;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: stretch;
+}
+
+.body-alllessons .list-lesson{
+    margin: 0px;
+    mix-blend-mode: normal;
+    overflow: hidden;
+    overflow-x: hidden;
+}
+
+.body-alllessons .title-lessons{
+    background-color: transparent;
+    color: var(--shark);
+    font-family: var(--font-family-playfair_display);
+    font-size: var(--font-size-xxl);
+    font-style: normal;
+    font-weight: 700;
+    height: auto;
+    left: calc(50.00% - 516px);
+    letter-spacing: 0.00px;
+    line-height: normal;
+    mix-blend-mode: normal;
+    text-align: left;
+    top: calc(50.00% - 701px);
+    width: auto;
+}
+
+.body-alllessons .div-lesson{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: stretch;
+    margin-top: 20px;
+}
+
+.body-alllessons .results{
+    background-color: transparent;
+    color: #000000;
+    font-family: var(--font-family-playfair_display);
+    font-size: var(--font-size-m);
+    font-style: normal;
+    font-weight: 400;
+    margin-left: 10px !important;
+}
+
+.body-alllessons .line1{
+    background-color: #00000033;
+    height: 2px;
+    width: 100%;
+}
+
+.body-alllessons .row-lessons{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: baseline;
+    align-content: stretch;
+}
+
+.body-alllessons .words-lessons{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: baseline;
+    align-content: stretch;
+    text-align: left;
+    transition: all 0.2s ease;
+    color: var(--shark);
+    font-family: var(--font-family-playfair_display);
+    font-size: var(--font-size-m);
+    font-style: normal;
+    font-weight: 400;
+    width: 350px;
+}
+
+.body-alllessons .subtitles{
+    background-color: transparent;
+    height: auto;
+    left: calc(50.00% - 515px);
+    letter-spacing: 0.00px;
+    line-height: normal;
+    mix-blend-mode: normal;
+    pointer-events: auto;
+    text-align: left;
+    top: calc(50.00% - 552px);
+    transition: all 0.2s ease;
+    width: auto;
+}
+
+.body-alllessons .lessons-section{
+    min-width: 745px !important;
+    margin-left: -20px;
+    margin-top: 40px !important;
+    border-style: none;
 }

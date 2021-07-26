@@ -50,3 +50,7 @@ export const signup = (user) => {
 export const login = (user) => {
   return axios.post(`${baseURL}/login`, user);
 };
+
+export const getUser = (userId) => {
+  return axios.get(`${baseURL}/profile/${userId}`);
+};

@@ -4,13 +4,28 @@
     top: 50%;
     left: 50%;
     margin-right: -50%;
-    transform: translate(-50%, -50%)
+    transform: translate(-50%, -50%);
+    z-index: 999;
 }
 
 .signup #paper_style {
-    padding: 20px 20px;
-    width: 300px;
-    margin: 0 auto;
+    background-color: rgba(250, 250, 250, 0.2);
+    left: calc(50.00% - 228px);
+    mix-blend-mode: normal;
+    position: absolute;
+    top: calc(50.00% - 228px);
+    width: 456px;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 1px 3px 14px 1px rgba(0,0,0,0.46);
+    font-family: var(--font-family-manrope);
+}
+
+.signup .title-signup{
+    color: #262626;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
 }
 
 .signup h2{
@@ -18,5 +33,51 @@
 }
 
 .signup #avatar_style{
-    background-color: #1bbd7e;
+    background-color: #00a692;
+}
+
+.signup .MuiInputBase-input{
+    background-color: transparent;
+    border-radius: 8px;
+    height: 49px;
+    left: 0px;
+    mix-blend-mode: normal;
+    top: 0px;
+    width: 392px;
+}
+
+.ellipse1-signup{
+    background-color: transparent;
+    height: 666px;
+    left: -14px;
+    mix-blend-mode: normal;
+    position: absolute;
+    top: 190px;
+    width: 666px;
+    z-index: 1;
+}
+
+.ellipse2-signup{
+    background-color: transparent;
+    height: 577px;
+    left: -124px;
+    mix-blend-mode: normal;
+    position: absolute;
+    top: -24px;
+    width: 577px;
+    z-index: 1;
+}
+
+.signup .btn-signup{
+    margin: 8px 0 !important;  
+    background-color: #00a692 !important;
+    border-radius: 6px;
+    height: 40px;
+    transition: all 0.2s ease;
+    width: 240px;
+    color: white;
+}
+
+.signup .btn-signup:hover{
+    transform: scale(1.1);
 }

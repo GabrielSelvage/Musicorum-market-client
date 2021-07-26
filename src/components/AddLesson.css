@@ -6,13 +6,6 @@
   box-sizing: border-box;
 }
 
-
-/* .smart-layers-pointers,
-.smart-layers-pointers * {
-  pointer-events: auto;
-  visibility: visible;
-} */
-
 .body-addlesson input:focus {
   outline: none;
 }
@@ -368,7 +361,7 @@
     flex-wrap: nowrap;
     justify-content: flex-start;
     align-items: flex-start;
-    align-content: stretch
+    align-content: stretch;
   }
   
   .body-addlesson .form-section{
