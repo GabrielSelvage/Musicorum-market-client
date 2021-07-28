@@ -116,3 +116,31 @@
     margin-top: 40px !important;
     border-style: none;
 }
+
+.body-alllessons .card-lesson{
+    border: 0px solid black;  
+    max-width: 18rem;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: center;
+	align-content: center;
+}
+
+.body-alllessons .card-lesson img{
+    max-width: 18rem;
+
+}
+
+.body-alllessons .subtitle-card{
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between !important;
+	align-items: center;
+	align-content: center;
+}

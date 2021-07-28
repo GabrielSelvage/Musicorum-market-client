@@ -1,38 +1,46 @@
 import React, { useState } from 'react';
 import './CreateTags.scss';
 import TagsInput from './TagsInput';
-const CreateTags = () => {
+
+const CreateTags = ({ handleTagsChange }) => {
+
   const [tags, setTags] = useState([]);
   const [errors, setErrors] = useState({});
+
   const changeHandler = (name, value) => {
-    if(name === 'tags') {
+    if (name === 'tags') {
       setTags(value);
-      if(value.length > 0 && errors.tags) {
+      if (value.length > 0 && errors.tags) {
         setErrors(prev => {
-          const prevErrors = {...prev};
+          const prevErrors = { ...prev };
           delete prevErrors.tags;
           return prevErrors;
         });
       }
     }
+
+    handleTagsChange(value);
   }
   const submitHandler = e => {
+    console.log("on submit");
     e.preventDefault();
-    if(tags.length === 0) {
+    if (tags.length === 0) {
       setErrors(prev => ({
         ...prev,
         tags: 'Please add at least one tag'
       }));
     }
-    if(tags.length ) {
+    if (tags.length) {
       console.log(tags);
       // Submit form
     }
+
+
   }
   return (
     <div className="container body-tags">
       <form onSubmit={submitHandler}>
-        <TagsInput 
+        <TagsInput
           placeholder="Add tag"
           id="tags"
           name="tags"

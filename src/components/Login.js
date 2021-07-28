@@ -5,8 +5,10 @@ import { Form, Formik, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import { useHistory } from "react-router-dom";
 import { login } from '../api';
+import { toast } from "react-toastify";
 import './Login.css'
-export const Login = ({ setLoggedInUser }) => {
+
+export const Login = ({ loggedInUser, setLoggedInUser }) => {
     let history = useHistory();
     const initialValues = {
         email: '',
@@ -26,11 +28,13 @@ export const Login = ({ setLoggedInUser }) => {
             });
             console.log("---->", user.data);
             setLoggedInUser(user.data);
+            history.push("/");
         } catch (e) {
             console.log("error: ", e);
+            toast.error("Invalid login");
+            history.push("/login");
         }
         props.resetForm();
-        //history.push("/success");
     };
     return (
         <>
@@ -40,8 +44,8 @@ export const Login = ({ setLoggedInUser }) => {
                         <Avatar id="avatar_style"><LockOutlinedIcon /></Avatar>
                         <br />
                         <div className="row-login">
-                            <h2 className="title">Loginnnn</h2>
-                            <Typography> Do you have an account ?
+                            <h2 className="title">Login</h2>
+                            <Typography className="tip"> Do you have an account ?
                                 <Link className="a-login" href="#" >
                                     {/* onClick={() => handleChange("event", 1)} */}
                                     Sign up
@@ -53,8 +57,8 @@ export const Login = ({ setLoggedInUser }) => {
                     <Formik initialValues={initialValues} onSubmit={onSubmit} validationSchema={validationSchema}>
                         {(props) => (
                             <Form>
-                                <Field as={TextField} className="textFieldStyle" name="email" label="Username"
-                                    placeholder="Enter username" fullWidth required
+                                <Field as={TextField} className="textFieldStyle" name="email" label="Email"
+                                    placeholder="Enter email" fullWidth required
                                     helperText={<ErrorMessage name="email" />} />
                                 <br /><br />
                                 <Field as={TextField} className="textFieldStyle" name="password" label="Password"

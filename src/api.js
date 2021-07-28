@@ -9,7 +9,7 @@ export const getAllLessons = () => {
 };
 
 export const addLesson = (lesson) => {
-  return axios.post(`${baseURL}/add-lesson`, lesson);
+  return axios.post(`${baseURL}/add-lesson`, lesson, { withCredentials: true });
 };
 
 export const getLesson = (lessonId) => {
@@ -47,10 +47,30 @@ export const signup = (user) => {
   return axios.post(`${baseURL}/signup`, user);
 };
 
-export const login = (user) => {
-  return axios.post(`${baseURL}/login`, user);
+export const beteacher = (user) => {
+  return axios.post(`${baseURL}/beteacher`, user);
 };
 
-export const getUser = (userId) => {
-  return axios.get(`${baseURL}/profile/${userId}`);
+export const login = (user) => {
+  return axios.post(`${baseURL}/login`, user, { withCredentials: true });
+};
+
+export const loggedIn = () => {
+  return axios.get(`${baseURL}/loggedin`, { withCredentials: true });
+};
+
+export const logout = () => {
+  return axios.post(`${baseURL}/logout`, null, { withCredentials: true });
+};
+
+export const getUser = () => {
+  return axios.get(`${baseURL}/profile`, { withCredentials: true });
+}
+
+export const updateUser = (updatedUser) => {
+  return axios.put(`${baseURL}/profile/${updatedUser.id}`, updatedUser);
+};
+
+export const updateSettings = (updatedUser) => {
+  return axios.put(`${baseURL}/account-settings/${updatedUser.id}`, updatedUser);
 };

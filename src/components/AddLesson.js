@@ -5,189 +5,181 @@ import CreateTags from "../components/CreateTags";
 import "./AddLesson.css";
 
 class AddLesson extends React.Component {
-  state = {
-    title: "",
-    description: "",
-    price: "",
-    course:"",
-    teacher:"",
-    level:"",
-    tags:[],
-    imageURL: "",
-    preview: "",
-    video: "",
-  };
+    state = {
+        id: "",
+        title: "",
+        description: "",
+        course: "",
+        imagePreviewUrl: "",
+        videoUrl: "",
+        level: "beginner",
+        teacher: "",
+        tags: [],
+        price: 0,
 
-  handleChange = (event) => {
-    this.setState({
-      [event.target.name]: event.target.value,
-    });
-  };
+    };
 
-//   handleFormSubmit = async (event) => {
-//     event.preventDefault();
+    handleTagsChange = (event) => {
+        this.setState({
+            tags: event,
+        });
+    };
 
-//     const uploadData = new FormData();
-//     uploadData.append("image", this.state.imageURL);
+    handleChange = (event) => {
 
-//     const response = await uploadFile(uploadData);
+        this.setState({
+            [event.target.name]: event.target.value,
+        });
+    };
 
-//     const newLesson = {
-//         title: this.state.title,
-//         description: this.state.description,
-//         price: this.state.price,
-//         course: this.state.course,
-//         teacher: this.state.teacher,
-//         level: this.state.level,
-//         tags: this.state.tags,
-//         imageURL: response.data.imageURL,
-//         preview: response.data.preview,
-//         video: response.data.video,
-//     };
+    handleChangeFile = (event) => {
+        this.setState({
+            [event.target.name]: event.target.files[0],
+        });
+    };
 
-//     await addLesson(newLesson);
+    handleFormSubmit = async (event) => {
+        event.preventDefault();
+        const uploadDataImage = new FormData();
+        const uploadDataVideo = new FormData();
 
-//     toast.success("Project created");
-//     this.props.history.push("/add-lesson");
-//   };
+        uploadDataImage.append("file", this.state.imagePreviewUrl);
+        uploadDataVideo.append("file", this.state.videoUrl);
 
-//   handleChangeFile = (event) => {
-//     this.setState({
-//       imageURL: event.target.files[0],
-//       preview: event.target.files[0],
-//       video: event.target.files[0],
-//     });
-//   };
+        const responseImage = await uploadFile(uploadDataImage);
+        const responseVideo = await uploadFile(uploadDataVideo);
 
-  render() {
-    const { title, description, price , course, teacher, level, tags, imageURL, preview, video} = this.state;
-    return (
-        <div className="body-addlesson">
-            <div className="container pos-form">
-            <form /*onSubmit={this.handleFormSubmit}*/ action="add-lesson" method="POST" enctype="multipart/form-data" className="class-form">
-                <input type="hidden" id="anPageName" name="page" value="upload-lesson" />
-                <div className="upload-lesson"> 
-                <br/><br/> 
-                  <h1 className="title">Profile / Upload Lesson</h1>
-                      <div className="profile">
-                          <img className=" profile-avatar profile-img" src="/img/profile.jpg" alt="profile"/>
-                          <div className="name-profile">Gabriel Santos</div>
-                      </div>
-                      <img className="line1" src="/img/line-53@1x.png" />
-                </div>
-                <div className="row-lesson">
-                  <div className="words-edit">
-                      <a href="#" className="title-profile smart-layers-pointers">EDIT PROFILE</a>
-                      <a href="#" className="title-profile smart-layers-pointers">ACCOUNT SETTINGS</a>
-                      <img className="line2" src="/img/line-4@1x.png" />
-                      <a href="#" className="title-profile smart-layers-pointers">MY LESSONS</a> 
-                      <a href="#" className="title-profile smart-layers-pointers">UPLOAD LESSON</a>
-                      <a href="#" className="title-profile smart-layers-pointers">EDIT LESSON</a>
-                  </div>
-                <div className="form-section">
-                            <input 
-                                onChange={this.handleChange} 
-                                name="title" 
-                                placeholder="Title" 
-                                type="text" 
-                                className="rectangle-form border-1px-black title-form"
-                                value={title}
-                            />
-                        <br/>
-                            <textarea
-                                class="rectangle-form2 border-1px-black playfairdisplay-normal-gravel-16px title-form"
-                                name="description"
-                                placeholder="Description"
-                                type="text"
-                                onChange={this.handleChange}
-                                value={description}>
-                            </textarea>
-                    <div className="small-form">
-                        <br/>
-                            <input 
-                                onChange={this.handleChange}
-                                name="price" 
-                                placeholder="Price" 
-                                type="text" 
-                                className="rectangle-form3 border-1px-black"
-                                value={price}
-                            />
-                        <br/>
-                            <input 
-                                onChange={this.handleChange}
-                                name="course" 
-                                placeholder="Course" 
-                                type="text" 
-                                className="rectangle-form3 border-1px-black"
-                                value={course}
-                            />
-                        <br/>
-                                <select 
-                                    onChange={this.handleChange}
-                                    name="level" 
-                                    type="text" 
-                                    className="select-class rectangle-form3 border-1px-black"
-                                    value={level}
-                                >
-                                    <option value="" selected>Level</option>
-                                    <option onChange={this.handleChange} value="beginner">Beginner</option>
-                                    <option onChange={this.handleChange}value="intermediate">Intermediate</option>
-                                    <option onChange={this.handleChange}value="advanced">Advanced</option>
-                                </select>
-                        <br></br>
-                        </div>    
-                            <div className="title-form">
-                                <div className="rectangle-form3 border-1px-black title-form">
-                                    <CreateTags />
-                                </div>
+        const newLesson = {
+            imagePreviewUrl: responseImage.data.fileUrl,
+            videoUrl: responseVideo.data.fileUrl,
+            title: this.state.title,
+            course: this.state.course,
+            description: this.state.description,
+            level: this.state.level,
+            tags: this.state.tags,
+            teacher: this.props.loggedInUser._id
+        };
+        await addLesson(newLesson);
+        toast.success("Project created");
+        this.props.history.push("/add-lessonTest");
+    };
+
+
+
+    render() {
+        const { title, description, level, course, price } = this.state;
+        return (
+            <>
+                <div className="body-addlesson">
+                    <div className="container pos-form">
+                        <div className="upload-lesson">
+                            <br /><br />
+                            <h1 className="title">Profile / Upload Lesson</h1>
+                            <div className="profile">
+                                <img className=" profile-avatar profile-img" src="/img/profile.jpg" alt="profile" />
+                                <div className="name-profile">Gabriel Santos</div>
                             </div>
-                            <br/><br/>
-                        <div className="final-form">
-                            <div class="input-file">
-                                    <label for="image" className="labels-form" >
-                                        <img src="/img/add-class2.png" alt="add-class"/>
-                                        <span>Cover Image</span>
-                                    </label>
-                                    <input 
-                                        onChange={this.handleChange}
-                                        type="file" 
-                                        name="image" 
-                                        id="image" 
-                                        className="input-class"
-                                        value={imageURL}
-                                    />
-                                </div>
-                                <br/>
-                            <div class="input-file">
-                                    <label for="image" className="labels-form">
-                                        <img src="/img/add-class2.png" alt="add-class"/>
-                                        <span>Video Lesson</span>
-                                    </label>
-                                    <input 
-                                        onChange={this.handleChange}
-                                        type="file"
-                                        name="image"
-                                        id="image" 
-                                        className="input-class"
-                                        value={video}
-                                    />
-                                </div>
-                            <br></br><br/>
-                            <button type="submit">
-                                <div class="button-class">
-                                    <div class="upload-button">Upload</div>
-                                </div>
-                            </button>
+                            <img className="line1" src="/img/line-53@1x.png" />
+                        </div>
+                        <div className="row-lesson">
+                            <div className="words-edit">
+                                <a href="/edit-profile" className="title-profile smart-layers-pointers">EDIT PROFILE</a>
+                                <a href="/account-settings" className="title-profile smart-layers-pointers">ACCOUNT SETTINGS</a>
+                                <img className="line2" src="/img/line-4@1x.png" />
+                                <a href="/my-lessons" className="title-profile smart-layers-pointers">MY LESSONS</a>
+                                <a href="/add-lesson" className="title-profile smart-layers-pointers">UPLOAD LESSON</a>
+                                <a href="/lesson/:id/edit" className="title-profile smart-layers-pointers">EDIT LESSON</a>
                             </div>
-                            <br></br><br></br><br></br><br></br><br></br>
+                            <form className="d-flex flex-column" style={{ width: "300px" }} onSubmit={this.handleFormSubmit} encType="multipart/form-data">
+                                <div className="form-section">
+                                    <input
+                                        type="text"
+                                        className="rectangle-form border-1px-black title-form"
+                                        placeholder="Title"
+                                        onChange={this.handleChange}
+                                        name="title"
+                                        value={title}
+                                    />
+                                    <br />
+                                    <textarea
+                                        type="text"
+                                        class="rectangle-form2 border-1px-black playfairdisplay-normal-gravel-16px title-form"
+                                        onChange={this.handleChange}
+                                        name="description"
+                                        placeholder="Description"
+                                        value={description}>
+                                    </textarea>
+                                    <div className="small-form">
+                                        <br />
+                                        <input
+                                            type="number"
+                                            className="rectangle-form3 border-1px-black"
+                                            onChange={this.handleChange}
+                                            name="price"
+                                            placeholder="Price"
+                                            value={price}
+                                        />
+                                        <br />
+                                        <input
+                                            type="text"
+                                            className="rectangle-form3 border-1px-black"
+                                            onChange={this.handleChange}
+                                            name="course"
+                                            placeholder="Course"
+                                            value={course}
+                                        />
+                                        <br />
+                                        <select
+                                            onChange={this.handleChange}
+                                            className="select-class rectangle-form3 border-1px-black"
+                                            name="level"
+                                            type="text"
+                                            placeholder="Level"
+                                            value={level}
+                                        >
+                                            <option selected value="beginner">Level</option>
+                                            <option onChange={this.handleChange} value="beginner">Beginner</option>
+                                            <option onChange={this.handleChange} value="intermediate">Intermediate</option>
+                                            <option onChange={this.handleChange} value="advanced">Advanced</option>
+                                        </select>
+                                        <br></br>
+                                    </div>
+                                    <div className="title-form">
+                                        <div className="rectangle-form3 border-1px-black title-form">
+                                            <CreateTags handleTagsChange={this.handleTagsChange} />
+                                        </div>
+                                    </div>
+                                    <br /><br />
+                                    <div className="final-form">
+                                        <div class="input-file">
+                                            <label for="imagePreviewUrl" /*className="labels-form"*/ >
+                                                <input type="file" name="imagePreviewUrl" onChange={this.handleChangeFile} /*className="input-class"*/ />
+                                                {/* <img src="/img/add-class2.png" alt="add-class" /> */}
+                                                {/* Cover Image */}
+                                            </label>
+                                        </div>
+                                        <br />
+                                        <div class="input-file">
+                                            {/* <label for="videoUrl" className="labels-form"><img src="/img/add-class2.png" alt="add-class" />Video Lesson</label> */}
+                                            <input type="file" name="videoUrl" /*className="input-class"*/ onChange={this.handleChangeFile} />
+                                        </div>
+                                        <br></br><br />
+                                        <button type="submit">
+                                            <div class="button-class">
+                                                <div class="upload-button">Upload</div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                    <br></br><br></br><br></br><br></br><br></br>
+                                </div>
+
+                            </form>
                         </div>
                     </div>
-
-          </form>
-        </div>
-    </div>
-    );
-  }
+                </div>
+            </>
+        );
+    }
 }
 
 export default AddLesson;

@@ -1,15 +1,26 @@
 .body-navbar{
-    font-family: "Manrope";
+    font-family: "Playfair Display";
     background-color: #262626;
+    z-index: 9999999;
 }
 
 @font-face {
-    font-family: "Manrope";
-    src: url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    font-family: "Playfair Display";
+    src:  url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+}
+
+:root {
+    --cor-fundo: #262626;
+    --cor-hover: #00a692;
+    --cor-primaria: rgb(231, 241, 236);
 }
 
 .body-navbar .row{
     min-height: 600px !important;
+}
+
+.body-navbar p{
+    color: white;
 }
 
 .body-navbar .nav-new{
@@ -22,11 +33,6 @@
 	align-content: space-between;
 }
 
-.body-navbar .container{
-    width: 99.9% !important;
-    margin-top: -10px;
-}
-
 .body-navbar .MuiSvgIcon-root{
     color: #fff;
     font-size: 25px !important;
@@ -36,6 +42,16 @@
     color: #fff !important;
     margin-left: 40px;
     text-decoration: none;
+}
+
+.body-navbar .teach-lessons{
+    color: #fff !important;
+    margin-left: 145px;
+    text-decoration: none;
+    margin-top: 13px;
+    font-size: 13px;
+    color: #00a692 !important;
+    font-weight: bolder;
 }
 
 .body-navbar .lessons{
@@ -77,7 +93,7 @@
 }
 
 .body-navbar .dropdown-menu{
-    z-index: 1;
+    z-index: 9999;
 }
 
 .body-navbar .nav-item, .body-navbar .dropdown{
@@ -101,7 +117,8 @@
 .body-navbar .search{
     border-style: none;
     margin-top: 20px;
-    margin-left: 240px;
+    margin-left: 415px;
+    position: absolute;
 }
 
 .body-navbar .mr-sm-2, .body-navbar  .form-control {
@@ -182,9 +199,103 @@
     color: white;
     font-size: 30px !important;
     margin-right: 0px;
+    border-radius: 100%;
+    max-width: 30px;
+    min-height: 30px;
 }
 
 .body-navbar .login-user:hover{
     transform: scale(1.1);
     color: #00a692;
+}
+
+.body-navbar .user{
+    display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+    position: relative;
+}
+
+.body-navbar .icons{
+    margin-top: 20px;
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	align-items: center;
+	align-content: center;
+
+}
+
+.body-navbar .welcome{
+    font-size: 13px;
+}
+
+.body-navbar .dp-menu ul {
+    list-style-type: none;
+    padding: 0;
+    z-index: 999999;
+}
+
+.body-navbar .dp-menu ul {
+    background-color: var(--cor-fundo);
+    z-index: 999999;
+}
+
+.body-navbar .dp-menu ul li {
+    display: inline;
+    position: relative;
+    z-index: 999999;
+}
+
+.body-navbar .dp-menu ul li a {
+    color: var(--cor-primaria);
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px;
+    transition: background .3s;
+    z-index: 999999;
+}
+
+.body-navbar .dp-menu a:hover {
+    color: var(--cor-hover);
+    z-index: 999999;
+}
+
+/*sub menu*/
+.body-navbar .dp-menu ul ul {
+    display: none;
+    left: -100px;
+    position: absolute;
+    z-index: 999999 !important;
+}
+
+.body-navbar .dp-menu ul li:hover ul {
+    display: block;
+    z-index: 999999 !important;
+}
+
+.body-navbar .dp-menu ul ul {
+    width: 150px;
+    z-index: 999999 !important;
+}
+
+.body-navbar .dp-menu ul ul li a {
+    display: block;
+    z-index: 999999 !important;
+}
+
+.body-navbar .logout{
+    background-color: transparent;
+    color: white;
+    border-style: none;
+}
+
+.body-navbar .logout:hover{
+    background-color: transparent;
+    color: #00a692;
+    border-style: none;
 }

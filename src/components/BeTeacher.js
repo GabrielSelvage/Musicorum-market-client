@@ -6,14 +6,15 @@ import Checkbox from '@material-ui/core/Checkbox';
 import { Form, Formik, Field, ErrorMessage } from 'formik';
 import { FormHelperText } from '@material-ui/core';
 import * as Yup from 'yup';
-import { signup } from "../api";
+import { beteacher } from "../api";
 import './Signup.css';
-export const Signup = ({ handleChange }) => {
+export const BeTeacher = ({ handleChange }) => {
     const initialValues = {
         name: '',
         email: '',
         password: '',
-        role: "student",
+        description: "",
+        role: "teacher",
     }
     const validationSchema = Yup.object().shape({
         email: Yup.string().email('Please enter valid email').required("required"),
@@ -21,12 +22,13 @@ export const Signup = ({ handleChange }) => {
         name: Yup.string().min(3, "it's too short").required("Required field"),
     });
     const onSubmit = async (values, props) => {
-        const { email, password, name } = values
+        const { email, password, name, description } = values
         try {
-            await signup({
+            await beteacher({
                 email,
                 password,
                 name,
+                description,
             });
         } catch (e) {
             console.log("error: ", e);
@@ -52,6 +54,7 @@ export const Signup = ({ handleChange }) => {
                             <Field as={TextField} fullWidth name="name" label="Name" helperText={<ErrorMessage name="name" />} />
                             <Field as={TextField} fullWidth name="email" label="Email" helperText={<ErrorMessage name="email" />} />
                             <Field as={TextField} fullWidth name="password" label="Password" type="password" helperText={<ErrorMessage name="password" />} />
+                            <Field as={TextField} fullWidth name="description" label="Description" type="text-area" helperText={<ErrorMessage name="description" />} />
                             <FormControlLabel
                                 control={<Field as={Checkbox} name="termsAndConditions" />}
                                 label="I accept the terms and conditions"
