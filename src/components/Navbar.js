@@ -54,7 +54,7 @@ function BootstrapNavbar({ loggedInUser, setLoggedInUser }) {
                                             <li>
                                                 <a href="#"><img src={loggedInUser.imageUrl} alt="profile" className="login-user" /></a>
                                                 <ul>
-                                                    <li><NavLink to="/profile">Profile</NavLink></li>
+                                                    <li><NavLink to={`/profile/${loggedInUser._id}`}>Profile</NavLink></li>
                                                     <li><NavLink to="/account-settings">Account Settings</NavLink></li>
                                                     <li>{(loggedInUser && loggedInUser.role === 'teacher') && (<NavLink to={`/my-lessons/${loggedInUser._id}`}>My Lessons</NavLink>)}</li>
                                                     <li><NavLink to="/">

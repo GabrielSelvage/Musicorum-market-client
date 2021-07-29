@@ -279,7 +279,10 @@
     max-height: 42px;
     left: calc(50.00% - 516px);
     top: calc(50.00% - 646px);
-    max-width: 42px;
+    max-width: 42px !important;
+    max-height: 42px !important;
+    min-width: 42px;
+    min-height: 42px;
   }
 
   .body-addlesson .profile{

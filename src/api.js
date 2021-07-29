@@ -63,8 +63,8 @@ export const logout = () => {
   return axios.post(`${baseURL}/logout`, null, { withCredentials: true });
 };
 
-export const getUser = () => {
-  return axios.get(`${baseURL}/profile`, { withCredentials: true });
+export const getUser = (userId) => {
+  return axios.get(`${baseURL}/profile/${userId}`, { withCredentials: true });
 }
 
 export const updateUser = (updatedUser) => {

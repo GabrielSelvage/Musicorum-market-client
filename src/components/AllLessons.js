@@ -16,6 +16,7 @@ class AllLessons extends React.Component {
         isAdvanced: true,
 
 
+
     };
 
     async componentDidMount() {
@@ -104,7 +105,7 @@ class AllLessons extends React.Component {
                         <br /><br />
                         <h1 className="title-lessons">Guitar Lessons </h1>
                         <div className="div-lesson">
-                            <div className="results">121 results</div>
+                            <div className="results">{this.state.lessons.length} results</div>
                         </div>
                         <img className="line1" src="/img/line-4@1x.png" />
                     </div>
@@ -152,16 +153,16 @@ class AllLessons extends React.Component {
                         <div className="lessons-section">
                             <div className="card-lesson container">
                                 <div className="row justify-content-between">
-                                    {this.state.lessons.map(({ title, imagePreviewUrl, description, price, level }) => {
+                                    {this.state.lessons.map(({ title, imagePreviewUrl, description, price, level, _id }) => {
                                         return (
                                             <div className="col-md-4">
                                                 <div className="card" >
-                                                    <img class="card-img-top" src={imagePreviewUrl} alt={imagePreviewUrl} />
+                                                    <img className="card-img-top" src={imagePreviewUrl} alt={imagePreviewUrl} />
                                                     <div className="card-body">
-                                                        <h5 className="card-title ">{level}</h5>
+                                                        <h5 className="card-title ">{title}</h5>
                                                         <p className="card-text">{description}</p>
                                                         {price !== 0 ? (<p>{price} €</p>) : (<p>FREE</p>)}
-                                                        <NavLink to="/">
+                                                        <NavLink to={`/lesson/${_id}`}>
                                                             <button >See more</button>
                                                         </NavLink>
                                                     </div>

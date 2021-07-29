@@ -200,8 +200,10 @@
     font-size: 30px !important;
     margin-right: 0px;
     border-radius: 100%;
-    max-width: 40px;
-    max-height: 35px;
+    max-width: 30px !important;
+    max-height: 30px !important;
+    min-width: 30px;
+    min-height: 30px;
 }
 
 .body-navbar .login-user:hover{
