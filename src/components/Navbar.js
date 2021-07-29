@@ -17,6 +17,7 @@ function BootstrapNavbar({ loggedInUser, setLoggedInUser }) {
         await logout();
         setLoggedInUser(null);
     };
+    console.log(loggedInUser);
     return (
         <div className="body-navbar">
             <Navbar bg="dark" variant="dark" expand="lg" sticky="top" className="nav-new">
@@ -33,7 +34,7 @@ function BootstrapNavbar({ loggedInUser, setLoggedInUser }) {
                                 <NavDropdown.Divider />
                                 <NavDropdown.Item className="text-nav drop-text" href="/instruments">More Instruments</NavDropdown.Item>
                             </NavDropdown>
-                            {loggedInUser ? (<NavLink className="teach-lessons" to="/signup">Teach Lessons</NavLink>) : (<p></p>)}
+                            {(loggedInUser && loggedInUser.role === 'student') && (<NavLink className="teach-lessons" to="/signup">Teach Lessons</NavLink>) }
                         </Nav>
                         <Form action="/search" method="GET" className="search">
                             {/* <Button variant="outline-success">Search</Button> */}
@@ -53,9 +54,9 @@ function BootstrapNavbar({ loggedInUser, setLoggedInUser }) {
                                             <li>
                                                 <a href="#"><img src={loggedInUser.imageUrl} alt="profile" className="login-user" /></a>
                                                 <ul>
-                                                    <li><a href="/profile">Profile</a></li>
-                                                    <li><a href="/account-settings">Account Settings</a></li>
-                                                    <li><a href="/my-lessons">My Lessons</a></li>
+                                                    <li><NavLink to="/profile">Profile</NavLink></li>
+                                                    <li><NavLink to="/account-settings">Account Settings</NavLink></li>
+                                                    <li>{(loggedInUser && loggedInUser.role === 'teacher') && (<NavLink to={`/my-lessons/${loggedInUser._id}`}>My Lessons</NavLink>)}</li>
                                                     <li><NavLink to="/">
                                                         <button className="logout" onClick={logoutUser}>Logout</button>
                                                     </NavLink>

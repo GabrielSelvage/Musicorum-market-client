@@ -2,9 +2,8 @@ import "./App.css";
 import { Home } from "./components/Home";
 import AllLessons from "./components/AllLessons";
 import { Instruments } from "./components/Instruments";
-//import AddLessons from "./components/AddProject";
 import BootstrapNavbar from './components/NavBar';
-// import LessonsDetails from "./components/LessonDetails";
+import MyLessonDetails from "./components/MyLessonDetails";
 import UpdateLesson from "./components/UpdateLesson";
 import { Signup } from "./components/Signup";
 import { Login } from "./components/Login";
@@ -57,19 +56,39 @@ class App extends React.Component {
           <Route exact path={["/", "/home"]} component={Home} />
           <Route exact path="/lessons" component={AllLessons} />
           <Route exact path="/instruments" component={Instruments} />
-          {/*<Route exact path="/lessons/:id" component={LessonDetails} />*/}
-          <PrivateRoute exact path="/lesson/:id/edit" component={UpdateLesson} />
-          <PrivateRoute exact path="/my-lessons" component={MyLessons} />
-          <PrivateRoute exact path="/account-settings" component={AccountSettings} />
-          <PrivateRoute exact path="/edit-profile" component={EditProfile} />
+          <Route exact path="/lesson/:id" component={MyLessonDetails} />
           <Route exact path="/signup" component={Signup} />
           <Route exact path="/beteacher" component={BeTeacher} />
           <Route exact path="/search" component={SearchPage} />
           <Route exact path="/shoppingCar" component={ShoppingCar} />
-          <PrivateRoute path="/profile" component={Profile} />
-          <Route exact path="/add-lesson"
+          <PrivateRoute exact path="/profile"
+            render={(props) => {
+              return <Profile {...props} loggedInUser={this.state.loggedInUser} />;
+            }}
+          />
+          <PrivateRoute exact path="/edit-profile"
+            render={(props) => {
+              return <EditProfile {...props} loggedInUser={this.state.loggedInUser} />;
+            }}
+          />
+          <PrivateRoute exact path="/account-settings"
+            render={(props) => {
+              return <AccountSettings {...props} loggedInUser={this.state.loggedInUser} />;
+            }}
+          />
+          <PrivateRoute exact path="/my-lessons/:id"
+            render={(props) => {
+              return <MyLessons {...props} loggedInUser={this.state.loggedInUser} />;
+            }}
+          />
+          <PrivateRoute exact path="/add-lesson"
             render={(props) => {
               return <AddLesson {...props} loggedInUser={this.state.loggedInUser} />;
+            }}
+          />
+          <PrivateRoute exact path="/lesson/:id/edit"
+            render={(props) => {
+              return <UpdateLesson {...props} loggedInUser={this.state.loggedInUser} />;
             }}
           />
           <Route

@@ -1,5 +1,11 @@
 import React from 'react';
+import './Instruments.css';
 
 export const ShoppingCar = () => {
-    return <h2>ShoppingCar page</h2>
+    return (
+        <div className="body-instruments">
+            <h2>ShoppingCar page</h2>
+        </div>
+    )
+
 }

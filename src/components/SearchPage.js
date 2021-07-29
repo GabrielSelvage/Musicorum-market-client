@@ -1,5 +1,10 @@
 import React from 'react';
+import './Search.css';
 
 export const SearchPage = () => {
-    return <h2>Search page</h2>
+    return (
+        <div className="body-search">
+        <h2>Search page</h2>
+        </div>
+    )
 }

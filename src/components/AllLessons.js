@@ -7,14 +7,93 @@ import "./AllLessons.css";
 class AllLessons extends React.Component {
     state = {
         lessons: [],
+        allLessons: [],
+        beginnerLessons: [],
+        intermediateLessons: [],
+        advancedLessons: [],
+        isBeginner: true,
+        isIntermediate: true,
+        isAdvanced: true,
+
+
     };
 
     async componentDidMount() {
         const response = await getAllLessons();
+        //Creating arrays with each type of level
+        const beginnerLessons = response.data.filter((lesson) => lesson.level === "beginner");
+        const intermediateLessons = response.data.filter((lesson) => lesson.level === "intermediate");
+        const advancedLessons = response.data.filter((lesson) => lesson.level === "advanced");
+        const payedLessons = response.data.filter((lesson) => lesson.price > 0);
+        const freeLessons = response.data.filter((lesson) => lesson.price === 0);
+
         this.setState({
             lessons: response.data,
+            allLessons: response.data,
+            beginnerLessons,
+            intermediateLessons,
+            advancedLessons,
+            payedLessons,
+            freeLessons,
+
         });
-    }
+    };
+
+
+
+
+    handleCheckChange = (event) => {
+        this.setState((state) => {
+            //Converting a "isSomething" to just "something"
+            const level = event.target.name.slice(2).toLowerCase();
+
+            if (this.state[event.target.name]) {
+                return {
+                    //filter the current level out
+                    [event.target.name]: event.target.checked,
+                    lessons: state.lessons.filter((lesson) => lesson.level !== level),
+                }
+            } else {
+                return {
+                    //add the current level back
+                    [event.target.name]: event.target.checked,
+                    lessons: state.lessons.concat(this.state[level + "Lessons"]),
+                }
+            }
+
+
+        });
+    };
+
+    handleButtonChange = (event) => {
+        console.log(event.target.name);
+        this.setState((state) => {
+
+            if (event.target.name === "payed") {
+                return {
+                    lessons: this.state.payedLessons,
+                    isBeginner: true,
+                    isIntermediate: true,
+                    isAdvanced: true,
+                }
+            } else if (event.target.name === "free") {
+                return {
+                    lessons: this.state.freeLessons,
+                    isBeginner: true,
+                    isIntermediate: true,
+                    isAdvanced: true,
+                }
+            } else {
+                return {
+                    lessons: this.state.allLessons,
+                    isBeginner: true,
+                    isIntermediate: true,
+                    isAdvanced: true,
+                }
+            }
+
+        });
+    };
 
     render() {
 
@@ -33,105 +112,67 @@ class AllLessons extends React.Component {
                         <div className="words-lessons">
                             <br /><br />
                             <h4 className="subtitles">Lessons Type</h4>
+
                             <div class="btn-lessons">
-                                <a href="/lessons">All</a>
-                                <a href="/payed-lessons">Payed</a>
-                                <a href="/free-lessons">Middle</a>
+                                <button name="all" onClick={this.handleButtonChange} >All</button>
+                                <button name="payed" onClick={this.handleButtonChange} >Payed</button>
+                                <button name="free" onClick={this.handleButtonChange} >Free</button>
                             </div>
                             <h4 className="subtitles">Lessons Level</h4>
                             <label>
                                 <input
-                                    name="isGoing"
+                                    name="isBeginner"
                                     type="checkbox"
-                                    checked="something" //-> {this.state.isGoing}
-                                    onChange="something" //->{this.handleInputChange}
+                                    checked={this.state.isBeginner}
+                                    onChange={this.handleCheckChange}
                                 />
                                 <span>Beginner</span>
                             </label>
                             <label>
                                 <input
-                                    name="isGoing"
+                                    name="isIntermediate"
                                     type="checkbox"
-                                    checked="something" //-> {this.state.isGoing}
-                                    onChange="something" //->{this.handleInputChange}
+                                    checked={this.state.isIntermediate}
+                                    onChange={this.handleCheckChange}
                                 />
                                 <span>Intermediate</span>
                             </label>
                             <label>
                                 <input
-                                    name="isGoing"
+                                    name="isAdvanced"
                                     type="checkbox"
-                                    checked="something" //-> {this.state.isGoing}
-                                    onChange="something" //->{this.handleInputChange}
+                                    checked={this.state.isAdvanced}
+                                    onChange={this.handleCheckChange}
                                 />
                                 <span>Advanced</span>
                             </label>
-                            <h4 className="subtitles">Lessons Length</h4>
-                            <label>
-                                <input
-                                    name="isGoing"
-                                    type="checkbox"
-                                    checked="something" //-> {this.state.isGoing}
-                                    onChange="something" //->{this.handleInputChange}
-                                />
-                                <span>- 15min</span>
-                            </label>
-                            <label>
-                                <input
-                                    name="isGoing"
-                                    type="checkbox"
-                                    checked="something" //-> {this.state.isGoing}
-                                    onChange="something" //->{this.handleInputChange}
-                                />
-                                <span>15 - 30min</span>
-                            </label>
-                            <label>
-                                <input
-                                    name="isGoing"
-                                    type="checkbox"
-                                    checked="something" //-> {this.state.isGoing}
-                                    onChange="something" //->{this.handleInputChange}
-                                />
-                                <span>30 - 60min</span>
-                            </label>
-                            <label>
-                                <input
-                                    name="isGoing"
-                                    type="checkbox"
-                                    checked="something" //-> {this.state.isGoing}
-                                    onChange="something" //->{this.handleInputChange}
-                                />
-                                <span>+ 60min</span>
-                            </label>
+
                         </div>
+
                         <div className="lessons-section">
-                            <div className="card-lesson">
-                                <p>teste</p>
-                                {this.state.lessons.map((lesson) => {
-                                    return (
-                                        <li key={lesson._id}>
-                                            <NavLink to={`/lessons/${lesson._id}`}>
-                                                {lesson.title}
-                                                {lesson.description}
-                                            </NavLink>
-                                        </li>
-                                    );
-                                })}
-                                <img src="" alt="rectangle-lessons"></img>
-                                <div className="subtitle-card">
-                                    <p>15 students</p>
-                                    <p>23m</p>
-                                </div>
-                                <h1>Learn how to play a chromatic scale on everys tons</h1>
-                                <div className="subtitle-card">
-                                    <p>Gabriel Selvage</p>
-                                    <div>
-                                        <Heart />
-                                        <ShoppingCart />
-                                    </div>
+                            <div className="card-lesson container">
+                                <div className="row justify-content-between">
+                                    {this.state.lessons.map(({ title, imagePreviewUrl, description, price, level }) => {
+                                        return (
+                                            <div className="col-md-4">
+                                                <div className="card" >
+                                                    <img class="card-img-top" src={imagePreviewUrl} alt={imagePreviewUrl} />
+                                                    <div className="card-body">
+                                                        <h5 className="card-title ">{level}</h5>
+                                                        <p className="card-text">{description}</p>
+                                                        {price !== 0 ? (<p>{price} €</p>) : (<p>FREE</p>)}
+                                                        <NavLink to="/">
+                                                            <button >See more</button>
+                                                        </NavLink>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        );
+                                    })}
+
                                 </div>
                             </div>
-                            <br></br><br></br><br></br><br></br><br></br>
+
                         </div>
                     </div>
                 </div>

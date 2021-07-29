@@ -12,8 +12,12 @@ export const addLesson = (lesson) => {
   return axios.post(`${baseURL}/add-lesson`, lesson, { withCredentials: true });
 };
 
+export const getLessonUser = (userId) => {
+  return axios.get(`${baseURL}/lesson/${userId}`);
+};
+
 export const getLesson = (lessonId) => {
-  return axios.get(`${baseURL}/lessons/${lessonId}`);
+  return axios.get(`${baseURL}/lesson/${lessonId}`);
 };
 
 export const deleteLesson = (lessonId) => {

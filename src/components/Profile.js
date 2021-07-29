@@ -1,10 +1,13 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import { getUser } from '../api';
 import "./AddLesson.css"
 import "./Profile.css"
 
 class Profile extends React.Component {
     state = {
+        isLoading: true,
+        isLoggedIn: false,
         id: "",
         name: "",
         email: "",
@@ -23,13 +26,14 @@ class Profile extends React.Component {
             description: response.data.description,
             imageUrl: response.data.imageUrl,
             myFavourites: response.data.myFavourites,
+            // user: this.props.loggedInUser,
         });
     }
 
-    
-
     render() {
         const { id, name, email, description, imageUrl, myFavourites } = this.state;
+        const { loggedInUser} = this.props;
+        console.log(loggedInUser);
         return (
             <div className="body-addlesson">
                 <div className="container pos-form">
@@ -44,12 +48,12 @@ class Profile extends React.Component {
                     </div>
                     <div className="row-lesson">
                         <div className="words-edit">
-                            <a href="/edit-profile" className="title-profile smart-layers-pointers">EDIT PROFILE</a>
-                            <a href="/account-settings" className="title-profile smart-layers-pointers">ACCOUNT SETTINGS</a>
+                            <NavLink to="/edit-profile" className="title-profile smart-layers-pointers">EDIT PROFILE</NavLink>
+                            <NavLink to="/account-settings" className="title-profile smart-layers-pointers">ACCOUNT SETTINGS</NavLink>
                             <img className="line2" src="/img/line-4@1x.png" />
-                            <a href="/my-lessons" className="title-profile smart-layers-pointers">MY LESSONS</a>
-                            <a href="/add-lesson" className="title-profile smart-layers-pointers">UPLOAD LESSON</a>
-                            <a href="/lesson/:id/edit" className="title-profile smart-layers-pointers">EDIT LESSON</a>
+                            {(loggedInUser && loggedInUser.role === 'teacher') && (<NavLink to={`/my-lessons/${this.state.loggedInUser._id}`} className="title-profile smart-layers-pointers">MY LESSONS</NavLink>)}
+                            {(loggedInUser && loggedInUser.role === 'teacher') && (<NavLink to="/add-lesson" className="title-profile smart-layers-pointers">UPLOAD LESSON</NavLink>)}
+                            {(loggedInUser && loggedInUser.role === 'teacher') && (<NavLink to="/lesson/:id/edit" className="title-profile smart-layers-pointers">EDIT LESSON</NavLink>)}
                         </div>
                         <div className="form-section">
                             <div className="body-profile">

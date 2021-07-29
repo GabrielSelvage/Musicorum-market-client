@@ -1,5 +1,6 @@
 import React from "react";
-import { addLesson, uploadFile } from "../api";
+import { NavLink } from 'react-router-dom';
+import { addLesson, uploadFile, getUser } from "../api";
 import { toast } from "react-toastify";
 import CreateTags from "../components/CreateTags";
 import "./AddLesson.css";
@@ -16,8 +17,20 @@ class AddLesson extends React.Component {
         teacher: "",
         tags: [],
         price: 0,
-
+        userId: '',
+        userName: '',
+        userImageUrl: ''
     };
+
+    async componentDidMount() {
+        const response = await getUser(this.props.match.params.id);
+        this.setState({
+            userId: response.data._id,
+            userName: response.data.name,
+            userImageUrl: response.data.imageUrl,
+        });
+    }
+
 
     handleTagsChange = (event) => {
         this.setState({
@@ -57,38 +70,39 @@ class AddLesson extends React.Component {
             description: this.state.description,
             level: this.state.level,
             tags: this.state.tags,
+            price: this.state.price,
             teacher: this.props.loggedInUser._id
         };
         await addLesson(newLesson);
         toast.success("Project created");
-        this.props.history.push("/add-lessonTest");
+        this.props.history.push("/my-lessons");
     };
 
 
 
     render() {
-        const { title, description, level, course, price } = this.state;
+        const { userName, userImageUrl, title, description, level, course, price } = this.state;
         return (
             <>
                 <div className="body-addlesson">
                     <div className="container pos-form">
                         <div className="upload-lesson">
                             <br /><br />
-                            <h1 className="title">Profile / Upload Lesson</h1>
+                            <h1 className="title">Profile / Account Settings </h1>
                             <div className="profile">
-                                <img className=" profile-avatar profile-img" src="/img/profile.jpg" alt="profile" />
-                                <div className="name-profile">Gabriel Santos</div>
+                                <img className=" profile-avatar profile-img" src={userImageUrl} alt="profile" />
+                                <div className="name-profile">{userName}</div>
                             </div>
                             <img className="line1" src="/img/line-53@1x.png" />
                         </div>
                         <div className="row-lesson">
                             <div className="words-edit">
-                                <a href="/edit-profile" className="title-profile smart-layers-pointers">EDIT PROFILE</a>
-                                <a href="/account-settings" className="title-profile smart-layers-pointers">ACCOUNT SETTINGS</a>
+                                <NavLink to="/edit-profile" className="title-profile smart-layers-pointers">EDIT PROFILE</NavLink>
+                                <NavLink to="/account-settings" className="title-profile smart-layers-pointers">ACCOUNT SETTINGS</NavLink>
                                 <img className="line2" src="/img/line-4@1x.png" />
-                                <a href="/my-lessons" className="title-profile smart-layers-pointers">MY LESSONS</a>
-                                <a href="/add-lesson" className="title-profile smart-layers-pointers">UPLOAD LESSON</a>
-                                <a href="/lesson/:id/edit" className="title-profile smart-layers-pointers">EDIT LESSON</a>
+                                <NavLink to="/my-lessons" className="title-profile smart-layers-pointers">MY LESSONS</NavLink>
+                                <NavLink to="/add-lesson" className="title-profile smart-layers-pointers">UPLOAD LESSON</NavLink>
+                                <NavLink to="/lesson/:id/edit" className="title-profile smart-layers-pointers">EDIT LESSON</NavLink>
                             </div>
                             <form className="d-flex flex-column" style={{ width: "300px" }} onSubmit={this.handleFormSubmit} encType="multipart/form-data">
                                 <div className="form-section">

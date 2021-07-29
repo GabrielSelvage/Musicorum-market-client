@@ -1,59 +1,47 @@
 import React from "react";
-import { updateLesson, getLesson } from "../api";
+import { NavLink } from 'react-router-dom';
+import { updateLesson, getLesson, getUser } from "../api";
 import { toast } from "react-toastify";
 
 class UpdateLesson extends React.Component {
-    //   state = {
-    //     id: "",
-    //     title: "",
-    //     description: "",
-    //   };
+    state = {
+        id: "",
+        name: "",
+        imageUrl: "",
+    };
 
-    //   async componentDidMount() {
-    //     const response = await getLesson(this.props.match.params.id);
-    //     this.setState({
-    //       id: response.data._id,
-    //       title: response.data.title,
-    //       description: response.data.description,
-    //     });
-    //   }
-
-    //   handleChange = (event) => {
-    //     this.setState({
-    //       [event.target.name]: event.target.value,
-    //     });
-    //   };
-
-    //   handleFormSubmit = async (event) => {
-    //     event.preventDefault();
-    //     await updateLesson(this.state);
-    //     toast.success("Lesson updated");
-    //     this.props.history.push(`/lessons/${this.state.id}`);
-    //   };
+    async componentDidMount() {
+        const response = await getUser(this.props.match.params.id);
+        this.setState({
+            id: response.data._id,
+            name: response.data.name,
+            imageUrl: response.data.imageUrl,
+        });
+    }
 
     render() {
-        //const { title, description } = this.state;
+        const { name, imageUrl } = this.state;
         return (
             <>
                 <div className="body-addlesson">
                     <div className="container pos-form">
                         <div className="upload-lesson">
                             <br /><br />
-                            <h1 className="title">Profile/Edit Lesson </h1>
+                            <h1 className="title">Profile / Account Settings </h1>
                             <div className="profile">
-                                <img className=" profile-avatar profile-img" src="/img/profile.jpg" alt="profile" />
-                                <div className="name-profile"></div>
+                                <img className=" profile-avatar profile-img" src={imageUrl} alt="profile" />
+                                <div className="name-profile">{name}</div>
                             </div>
                             <img className="line1" src="/img/line-53@1x.png" />
                         </div>
                         <div className="row-lesson">
                             <div className="words-edit">
-                                <a href="/edit-profile" className="title-profile smart-layers-pointers">EDIT PROFILE</a>
-                                <a href="/account-settings" className="title-profile smart-layers-pointers">ACCOUNT SETTINGS</a>
+                                <NavLink to="/edit-profile" className="title-profile smart-layers-pointers">EDIT PROFILE</NavLink>
+                                <NavLink to="/account-settings" className="title-profile smart-layers-pointers">ACCOUNT SETTINGS</NavLink>
                                 <img className="line2" src="/img/line-4@1x.png" />
-                                <a href="/my-lessons" className="title-profile smart-layers-pointers">MY LESSONS</a>
-                                <a href="/add-lesson" className="title-profile smart-layers-pointers">UPLOAD LESSON</a>
-                                <a href="/lesson/:id/edit" className="title-profile smart-layers-pointers">EDIT LESSON</a>
+                                <NavLink to="/my-lessons" className="title-profile smart-layers-pointers">MY LESSONS</NavLink>
+                                <NavLink to="/add-lesson" className="title-profile smart-layers-pointers">UPLOAD LESSON</NavLink>
+                                <NavLink to="/lesson/:id/edit" className="title-profile smart-layers-pointers">EDIT LESSON</NavLink>
                             </div>
                             <div className="form-section">
                                 <h2>Teste</h2>

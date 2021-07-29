@@ -198,9 +198,8 @@
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: flex-start;
-    align-items: baseline;
     align-content: stretch;
-    margin-top: -25px;
+    margin-top: 25px;
   }
   
   .body-addlesson .title {
@@ -257,7 +256,6 @@
       align-content: stretch;
       line-height: 2.5rem;
       text-align: left;
-      margin-top: 40px;
       transition: all 0.2s ease;
       color: var(--shark);
       font-family: var(--font-family-playfair_display);
@@ -278,10 +276,10 @@
   }
   
   .body-addlesson .upload-lesson .profile-avatar {
-    height: 42px;
+    max-height: 42px;
     left: calc(50.00% - 516px);
     top: calc(50.00% - 646px);
-    width: 42px;
+    max-width: 42px;
   }
 
   .body-addlesson .profile{
@@ -350,7 +348,6 @@
   .body-addlesson #root > div > div.container.pos-form > form > div.row-lesson > div.form-section > div:nth-child(13) > div > div > form{
     min-width: 745px !important;
     margin-left: -20px;
-    margin-top: 10px !important;
     border-style: none;
   }
 

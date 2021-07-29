@@ -1,11 +1,12 @@
 import React from "react";
-import { addLesson, uploadFile } from "../api";
+import { addLesson, uploadFile, getUser } from "../api";
 import { toast } from "react-toastify";
 import CreateTags from "../components/CreateTags";
 import "./AddLesson.css";
 
 class AddLessonTest extends React.Component {
     state = {
+        id: "",
         title: "",
         description: "",
         course: "",
@@ -46,8 +47,10 @@ class AddLessonTest extends React.Component {
 
         const responseImage = await uploadFile(uploadDataImage);
         const responseVideo = await uploadFile(uploadDataVideo);
+        const response = await getUser(this.props.match.params.id);
 
         const newLesson = {
+            userId: response.data._id,
             imagePreviewUrl: responseImage.data.fileUrl,
             videoUrl: responseVideo.data.fileUrl,
             title: this.state.title,

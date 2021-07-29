@@ -8,6 +8,7 @@ import { FormHelperText } from '@material-ui/core';
 import * as Yup from 'yup';
 import { signup } from "../api";
 import './Signup.css';
+
 export const Signup = ({ handleChange }) => {
     const initialValues = {
         name: '',
@@ -21,12 +22,13 @@ export const Signup = ({ handleChange }) => {
         name: Yup.string().min(3, "it's too short").required("Required field"),
     });
     const onSubmit = async (values, props) => {
-        const { email, password, name } = values
+        const { email, password, name, role } = values
         try {
             await signup({
                 email,
                 password,
                 name,
+                role,
             });
         } catch (e) {
             console.log("error: ", e);

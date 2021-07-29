@@ -1,7 +1,8 @@
 import React from "react";
+import { NavLink } from 'react-router-dom';
 import { updateUser, getUser, uploadFile } from "../api";
 import { toast } from "react-toastify";
-import "./AllLessons.css"
+import "./AllLessons.css";
 
 class EditProfile extends React.Component {
   state = {
@@ -57,7 +58,7 @@ class EditProfile extends React.Component {
 
 
   render() {
-    const { name, description } = this.state;
+    const { name, description, imageUrl } = this.state;
     return (
       <>
         <div className="body-addlesson">
@@ -66,46 +67,57 @@ class EditProfile extends React.Component {
               <br /><br />
               <h1 className="title">Profile/Edit Profile</h1>
               <div className="profile">
-                <img className=" profile-avatar profile-img" src="/img/profile.jpg" alt="profile" />
-                <div className="name-profile"></div>
+                <img className=" profile-avatar profile-img" src={imageUrl} alt="profile" />
+                <div className="name-profile">{name}</div>
               </div>
               <img className="line1" src="/img/line-53@1x.png" />
             </div>
             <div className="row-lesson">
               <div className="words-edit">
-                <a href="/edit-profile" className="title-profile smart-layers-pointers">EDIT PROFILE</a>
-                <a href="/account-settings" className="title-profile smart-layers-pointers">ACCOUNT SETTINGS</a>
+                <NavLink to="/edit-profile" className="title-profile smart-layers-pointers">EDIT PROFILE</NavLink>
+                <NavLink to="/account-settings" className="title-profile smart-layers-pointers">ACCOUNT SETTINGS</NavLink>
                 <img className="line2" src="/img/line-4@1x.png" />
-                <a href="/my-lessons" className="title-profile smart-layers-pointers">MY LESSONS</a>
-                <a href="/add-lesson" className="title-profile smart-layers-pointers">UPLOAD LESSON</a>
-                <a href="/lesson/:id/edit" className="title-profile smart-layers-pointers">EDIT LESSON</a>
+                <NavLink to="/my-lessons" className="title-profile smart-layers-pointers">MY LESSONS</NavLink>
+                <NavLink to="/add-lesson" className="title-profile smart-layers-pointers">UPLOAD LESSON</NavLink>
+                <NavLink to="/lesson/:id/edit" className="title-profile smart-layers-pointers">EDIT LESSON</NavLink>
               </div>
               <div className="form-section">
-                <h2>Teste</h2>
-                <form onSubmit={this.handleFormSubmit} encType="multipart/form-data">
-                  <label>Name</label>
-                  <input
-                    type="text"
-                    name="name"
-                    onChange={this.handleChange}
-                    value={name}
-                  />
-                  <label>Description</label>
-                  <input
-                    type="text"
-                    name="description"
-                    onChange={this.handleChange}
-                    value={description}
-                  />
-                  <label>Image</label>
-                  <input
-                    type="file"
-                    name="image"
-                    onChange={this.handleChangeFile}
-                  />
-                  <button type="submit" >Update</button>
-                </form>
-                <br></br><br></br><br></br><br></br><br></br>
+                <div className="d-flex flex-column" style={{ width: "300px" }}>
+                  <form onSubmit={this.handleFormSubmit} encType="multipart/form-data">
+                    <input
+                      type="text"
+                      name="name"
+                      placeholder="Name"
+                      className="rectangle-form border-1px-black title-form"
+                      onChange={this.handleChange}
+                      value={name}
+                    />
+                    <br />
+                    <br />
+                    <input
+                      type="text"
+                      name="description"
+                      placeholder="Description"
+                      class="rectangle-form2 border-1px-black playfairdisplay-normal-gravel-16px title-form"
+                      onChange={this.handleChange}
+                      value={description}
+                    />
+                    <br />
+                    <br />  
+                    <div class="input-file">
+                      <input
+                        type="file"
+                        name="image"
+                        onChange={this.handleChangeFile}
+                      />
+                    </div>
+                    <br />
+                    <div class="button-class">
+                      <button class="upload-button" type="submit" >Update</button>
+                    </div>
+                  </form>
+                  <br></br><br></br><br></br><br></br><br></br>
+                </div>
               </div>
             </div>
           </div>
