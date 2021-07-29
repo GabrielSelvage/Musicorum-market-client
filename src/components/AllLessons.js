@@ -114,8 +114,8 @@ class AllLessons extends React.Component {
                             <h4 className="subtitles">Lessons Type</h4>
 
                             <div class="btn-lessons">
-                                <button name="all" onClick={this.handleButtonChange} >All</button>
-                                <button name="payed" onClick={this.handleButtonChange} >Payed</button>
+                                <button name="all" className="btn-all" onClick={this.handleButtonChange} >All</button>
+                                <button name="payed" className="btn-all" onClick={this.handleButtonChange} >Payed</button>
                                 <button name="free" onClick={this.handleButtonChange} >Free</button>
                             </div>
                             <h4 className="subtitles">Lessons Level</h4>

@@ -38,7 +38,7 @@ function BootstrapNavbar({ loggedInUser, setLoggedInUser }) {
                         </Nav>
                         <Form action="/search" method="GET" className="search">
                             {/* <Button variant="outline-success">Search</Button> */}
-                            <FormControl type="text" placeholder="What do you want to learn today?" className="mr-sm-2" as="input" />
+                            <FormControl name="q" type="text" placeholder="What do you want to learn today?" className="mr-sm-2" as="input" />
                             <SearchIcon className="lupa" />
                         </Form>
                     </Navbar.Collapse>

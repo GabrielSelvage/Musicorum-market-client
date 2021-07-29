@@ -75,7 +75,6 @@
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: flex-start;
-    align-items: baseline;
     align-content: stretch;
 }
 
@@ -143,4 +142,53 @@
 	justify-content: space-between !important;
 	align-items: center;
 	align-content: center;
+}
+
+/* .body-alllessons .card-body{
+
+} */
+
+.body-alllessons .btn-lessons{
+    background-color: transparent;
+    height: 39px;
+    left: 0px;
+    mix-blend-mode: normal;
+    top: 34px;
+    width: 288px;
+    border-radius: 18px;
+    border: 1px solid #0000004c;
+    box-sizing: border-box;
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: stretch;
+}
+
+.body-alllessons .btn-lessons button{
+    background-color: transparent;
+    height: 39px;
+    left: 0px;
+    mix-blend-mode: normal;
+    top: 0px;
+    width: 96px;
+    border-style: none;
+}
+
+.body-alllessons .btn-lessons button:focus{
+    background-color: black;
+    height: 39px;
+    left: 0px;
+    mix-blend-mode: normal;
+    top: 0px;
+    width: 96px;
+    border-style: none;
+    color: white;
+}
+
+
+.body-alllessons .btn-lessons .btn-all{
+    border-right: 1px solid #0000004c;
+
 }
