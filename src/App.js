@@ -3,7 +3,6 @@ import { Home } from "./components/Home";
 import AllLessons from "./components/AllLessons";
 import { Instruments } from "./components/Instruments";
 import BootstrapNavbar from './components/NavBar';
-import MyLessonDetails from "./components/MyLessonDetails";
 import UpdateLesson from "./components/UpdateLesson";
 import { Signup } from "./components/Signup";
 import { Login } from "./components/Login";
@@ -56,7 +55,6 @@ class App extends React.Component {
           <Route exact path={["/", "/home"]} component={Home} />
           <Route exact path="/lessons" component={AllLessons} />
           <Route exact path="/instruments" component={Instruments} />
-          <Route exact path="/lesson/:id" component={MyLessonDetails} />
           <Route exact path="/signup" component={Signup} />
           <Route exact path="/beteacher" component={BeTeacher} />
           <Route exact path="/search" component={SearchPage} />
