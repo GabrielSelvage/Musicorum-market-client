@@ -1,10 +1,9 @@
 import "./App.css";
 import { Home } from "./components/Home";
 import AllLessons from "./components/AllLessons";
-import { Instruments } from "./components/Instruments";
+import Instruments from "./components/Instruments";
 import BootstrapNavbar from './components/Navbar';
 import UpdateLesson from "./components/UpdateLesson";
-import { Signup } from "./components/Signup";
 import { Login } from "./components/Login";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
@@ -55,7 +54,7 @@ class App extends React.Component {
         <Switch>
           <Route exact path={["/", "/home"]} component={Home} />
           <Route exact path="/lessons" component={AllLessons} />
-          <Route exact path="/instruments" component={Instruments} />
+          <Route exact path="/instruments/:id" component={Instruments} />
           <Route exact path="/search" component={SearchPage} />
           <Route exact path="/shoppingCar" component={ShoppingCar} />
           <Route exact path="/lesson-details/:id" component={LessonDetails} />

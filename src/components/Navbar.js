@@ -54,13 +54,17 @@ function BootstrapNavbar({ loggedInUser, setLoggedInUser }) {
                         <Nav className="mr-auto">
                             <NavLink className="text-nav lessons" to="/lessons">{t('all_lessons')}</NavLink>
                             <NavDropdown title={t('instruments')} id="basic-nav-dropdown" style={{ color: "white" }}>
-                                <NavDropdown.Item className="text-nav drop-text" href="/instruments">Violin </NavDropdown.Item>
-                                <NavDropdown.Item className="text-nav drop-text" href="/instruments">Acoustic Guitar</NavDropdown.Item>
-                                <NavDropdown.Item className="text-nav drop-text" href="/instruments">Drums</NavDropdown.Item>
-                                <NavDropdown.Divider />
-                                <NavDropdown.Item className="text-nav drop-text" href="/instruments">More Instruments</NavDropdown.Item>
+                                <NavDropdown.Item >
+                                    <NavLink className="text-nav drop-text" to='/instruments/violin'> Violin </NavLink>
+                                </NavDropdown.Item>
+                                <NavDropdown.Item >
+                                    <NavLink className="text-nav drop-text" to='/instruments/guitar'> Acoustic Guitar </NavLink>
+                                </NavDropdown.Item>
+                                <NavDropdown.Item >
+                                    <NavLink className="text-nav drop-text" to='/instruments/piano'> Piano </NavLink>
+                                </NavDropdown.Item>
                             </NavDropdown>
-                            {(loggedInUser && loggedInUser.role === 'student') && (<NavLink className="teach-lessons" to="/beteacher">Teach Lessons</NavLink>)}
+                            {(loggedInUser && loggedInUser.role === 'student') && (<NavLink className="teach-lessons" to="/signup">{t('teach_lessons')}</NavLink>)}
                         </Nav>
                         <Form action="/search" method="GET" className="search">
                             {/* <Button variant="outline-success">Search</Button> */}

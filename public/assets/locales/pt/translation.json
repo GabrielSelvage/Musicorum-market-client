@@ -1,6 +1,9 @@
 {
     "welcome_message": "Bem-vindo",
     "instruments": "Instrumentos",
+    "teach_lessons": "Dê Aulas",
     "what_today": "O que deseja aprender hoje?",
+    "become_a_student": "Torne-se um estudante",
+    "become_a_teacher": "Torne-se um professor",
     "all_lessons": "Aulas"
 }

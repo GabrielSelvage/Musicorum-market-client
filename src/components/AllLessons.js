@@ -103,7 +103,7 @@ class AllLessons extends React.Component {
                 <div className="container posicion-lessons">
                     <div className="list-lesson">
                         <br /><br />
-                        <h1 className="title-lessons">Guitar Lessons </h1>
+                        <h1 className="title-lessons">All Lessons </h1>
                         <div className="div-lesson">
                             <div className="results">{this.state.lessons.length} results</div>
                         </div>

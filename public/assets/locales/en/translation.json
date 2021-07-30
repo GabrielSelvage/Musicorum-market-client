@@ -1,6 +1,9 @@
 {
     "welcome_message": "Welcome",
     "instruments": "Instruments",
+    "teach_lessons": "Teach Lessons",
     "what_today": "What do you want to learn today?",
+    "become_a_student": "Become a Student",
+    "become_a_teacher": "Become a Teacher",
     "all_lessons": "All Lessons"
 }
