@@ -43,7 +43,7 @@ export const Signup = ({ handleChange }) => {
         <>
             <Grid className="body-signup">
                 <Paper id="paper_style" className="title-signup">
-                    <br/><br/>
+                    <br /><br />
                     <Grid align='center'>
                         <Avatar id="avatar_style" >
                             <AddCircleOutlineOutlinedIcon />
@@ -60,7 +60,7 @@ export const Signup = ({ handleChange }) => {
                                 <Field as={TextField} fullWidth name="email" label="Email" helperText={<ErrorMessage name="email" />} />
                                 <Field as={TextField} fullWidth name="password" label="Password" type="password" helperText={<ErrorMessage name="password" />} />
                                 <FormControlLabel
-                                    control={<Field as={Checkbox} name="termsAndConditions" />}
+                                    control={<Field as={Checkbox} name="termsAndConditions" className="MuiCheckbox-colorSecondary Mui-checked" />}
                                     label="I accept the terms and conditions"
                                 />
                                 <FormHelperText><ErrorMessage name="termsAndConditions" /></FormHelperText>

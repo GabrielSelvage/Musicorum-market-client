@@ -126,6 +126,7 @@ class AllLessons extends React.Component {
                                 <input
                                     name="isBeginner"
                                     type="checkbox"
+                                    className= "MuiCheckbox-colorSecondary Mui-checked"
                                     checked={this.state.isBeginner}
                                     onChange={this.handleCheckChange}
                                 />

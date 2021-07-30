@@ -81,10 +81,6 @@
     padding: 5px;
 }
 
-.login .MuiFormHelperText-root{
-    color: red !important;
-}
-
 .login .a-login{
     color: #00a692;
     font-family: "Playfair Display";

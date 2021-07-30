@@ -44,6 +44,7 @@ export const BeTeacher = ({ handleChange }) => {
         <>
             <Grid className="body-signup">
                 <Paper id="paper_style">
+                    <br/><br/><br/>
                     <Grid align='center'>
                         <Avatar id="avatar_style">
                             <AddCircleOutlineOutlinedIcon />

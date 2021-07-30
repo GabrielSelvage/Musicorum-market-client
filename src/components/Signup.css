@@ -91,6 +91,10 @@
     color: #00a692 !important;
 }
 
+.MuiCheckbox-colorSecondary.Mui-checked {
+    color: #00a692 !important;
+}
+
 .MuiTypography-body1 {
     font-size: 14px !important;
     font-family: "Playfair Display" !important;

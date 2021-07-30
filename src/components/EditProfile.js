@@ -59,6 +59,8 @@ class EditProfile extends React.Component {
 
   render() {
     const { name, description, imageUrl } = this.state;
+    const { loggedInUser } = this.props;
+    console.log(loggedInUser);
     return (
       <>
         <div className="body-addlesson">
@@ -77,7 +79,7 @@ class EditProfile extends React.Component {
                 <NavLink to="/edit-profile" className="title-profile smart-layers-pointers">EDIT PROFILE</NavLink>
                 <NavLink to="/account-settings" className="title-profile smart-layers-pointers">ACCOUNT SETTINGS</NavLink>
                 <img className="line2" src="/img/line-4@1x.png" />
-                <NavLink to="/my-lessons" className="title-profile smart-layers-pointers">MY LESSONS</NavLink>
+                <NavLink to={`/my-lessons/${loggedInUser._id}`} className="title-profile smart-layers-pointers">MY LESSONS</NavLink>
                 <NavLink to="/add-lesson" className="title-profile smart-layers-pointers">UPLOAD LESSON</NavLink>
                 <NavLink to="/lesson/:id/edit" className="title-profile smart-layers-pointers">EDIT LESSON</NavLink>
               </div>
@@ -103,7 +105,7 @@ class EditProfile extends React.Component {
                       value={description}
                     />
                     <br />
-                    <br />  
+                    <br />
                     <div class="input-file">
                       <input
                         type="file"

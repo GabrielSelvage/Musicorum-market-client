@@ -9,6 +9,10 @@
     font-family: "Playfair" ;
 }
 
+.body-alllessons input::after{
+    background-color: rgb(160, 157, 157) !important;
+}
+
 .body-alllessons .subtitles {
     font-weight: 900;
     font-size: 20px;
@@ -29,6 +33,10 @@
     mix-blend-mode: normal;
     overflow: hidden;
     overflow-x: hidden;
+}
+
+.MuiCheckbox-colorSecondary.Mui-checked {
+    color: #00a692 !important;
 }
 
 .body-alllessons .title-lessons{

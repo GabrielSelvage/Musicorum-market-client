@@ -307,42 +307,17 @@
 .body-navbar .selectLangDiv{
     margin: 0 18px 0 0;
 }
+
 .body-navbar .selectLanguages{
     color: #00a692 !important;
-    background-color: #262626;
+    background-color: #262626 !important;
     border: none;
     text-align-last:right;
     font-family: "Playfair Display";
 }
-
-.body-navbar .selectLanguages select{
-    color: #00a692 !important;
-    background-color: #262626;
-    border: none;
-    text-align-last:right;
-    font-family: "Playfair Display";
-}
-
 
 .body-navbar select:focus {
     box-shadow: 0 0 0 0;
     border: 0 none;
     outline: 0;
 } 
-
-.body-navbar .selectLanguages:after{
-    content: "" !important;
-    position: absolute !important;
-    right: 8px !important;
-    top: 50% !important;
-    margin-top: -4px !important;
-    border-top: 8px solid transparent !important;
-    border-left: 6px solid transparent !important;
-    border-right: 6px solid transparent !important;
-    pointer-events: none,
-    /* color: #00a692 !important;
-    background-color: #262626;
-    border: none;
-    text-align-last:right;
-    font-family: "Playfair Display"; */
-}

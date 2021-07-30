@@ -39,7 +39,7 @@ class SearchPage extends React.Component {
     render() {
         const { searchResults, query } = this.state
         return (
-            <div className="container" style={{backgroundColor:"red"}}>
+            <div className="container">
                 <h4 className="subtitles">Results of {query}</h4>
                 {searchResults.length ? (
                     <div>
