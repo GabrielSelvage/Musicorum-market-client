@@ -167,10 +167,12 @@ class AllLessons extends React.Component {
                                                         <div className="card-body">
                                                             <h5 className="card-title subtitles">{title}</h5>
                                                             <br />
+                                                            <p className="card-text">{level}</p>
+                                                            <br />
                                                             <p className="card-text">{description}</p>
                                                             <br />
                                                             {price !== 0 ? (<p className="price">{price} €</p>) : (<p className="price">Free</p>)}
-                                                            <br /><br />
+                                                            <br />
                                                             <NavLink to={`/lesson-details/${_id}`}>
                                                                 <button className="button-class">See more</button>
                                                             </NavLink>

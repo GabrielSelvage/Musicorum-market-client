@@ -1,8 +1,9 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { getUser } from '../api';
-import "./AddLesson.css"
-import "./Profile.css"
+import "./AddLesson.css";
+import "./LessonDetails.css";
+import "./Profile.css";
 
 class Profile extends React.Component {
     state = {
@@ -18,7 +19,7 @@ class Profile extends React.Component {
 
     async componentDidMount() {
         const response = await getUser(this.props.match.params.id);
-        
+
         this.setState({
             id: response.data._id,
             name: response.data.name,
@@ -32,7 +33,7 @@ class Profile extends React.Component {
 
     render() {
         const { id, name, email, description, imageUrl, myFavourites } = this.state;
-        const { loggedInUser} = this.props;
+        const { loggedInUser } = this.props;
         console.log(loggedInUser);
         return (
             <div className="body-addlesson">
@@ -55,19 +56,21 @@ class Profile extends React.Component {
                             {(loggedInUser && loggedInUser.role === 'teacher') && (<NavLink to="/add-lesson" className="title-profile smart-layers-pointers">UPLOAD LESSON</NavLink>)}
                             {(loggedInUser && loggedInUser.role === 'teacher') && (<NavLink to="/lesson/:id/edit" className="title-profile smart-layers-pointers">EDIT LESSON</NavLink>)}
                         </div>
-                        <div className="form-section">
-                            <div className="body-profile">
-                                <h1 className="name-user-profile">Name: {name}</h1>
-                                <div className="img-profile">Image:
-                                    {imageUrl && (
-                                        <img style={{ width: "100px" }} src={imageUrl} alt="user" />
-                                    )}
+                        <div className="form-section body-detail">
+                            <div className=" profile-detail">
+                                <div className="body-profile">
+                                    <h1 className="name-user-profile">Name: {name}</h1>
+                                    <div className="img-profile img-profile-detail">Image:
+                                        {imageUrl && (
+                                            <img style={{ width: "100px" }} src={imageUrl} alt="user" />
+                                        )}
+                                    </div>
+                                    <p className="p-profile text-profile-detail">Email: {email}</p>
+                                    <p className="p-profile text-profile-detail">Id: {id}</p>
+                                    <p className="p-profile text-profile-detail">Description: {description}</p>
+                                    <p className="p-profile text-profile-detail">My Favourites: {myFavourites}</p>
+                                    <br></br><br></br><br></br><br></br><br></br>
                                 </div>
-                                <p className="p-profile">Email: {email}</p>
-                                <p className="p-profile">Id: {id}</p>
-                                <p className="p-profile">Description: {description}</p>
-                                <p className="p-profile">My Favourites: {myFavourites}</p>
-                                <br></br><br></br><br></br><br></br><br></br>
                             </div>
                         </div>
                     </div>

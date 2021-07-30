@@ -4,6 +4,7 @@ import { addLesson, uploadFile, getUser } from "../api";
 import { toast } from "react-toastify";
 import CreateTags from "../components/CreateTags";
 import "./AddLesson.css";
+import { Label } from "@material-ui/icons";
 
 class AddLesson extends React.Component {
     state = {
@@ -127,6 +128,7 @@ class AddLesson extends React.Component {
                                     </textarea>
                                     <div className="small-form">
                                         <br />
+                                        <br />
                                         <input
                                             type="number"
                                             className="rectangle-form3 border-1px-black"
@@ -135,6 +137,7 @@ class AddLesson extends React.Component {
                                             placeholder="Price"
                                             value={price}
                                         />
+                                        <br />
                                         <br />
                                         <input
                                             type="text"
@@ -147,7 +150,7 @@ class AddLesson extends React.Component {
                                         <br />
                                         <select
                                             onChange={this.handleChange}
-                                            className="select-class rectangle-form3 border-1px-black"
+                                            className="select-class rectangle-form3 border-1px-black form-control"
                                             name="level"
                                             type="text"
                                             placeholder="Level"
@@ -165,19 +168,19 @@ class AddLesson extends React.Component {
                                             <CreateTags handleTagsChange={this.handleTagsChange} />
                                         </div>
                                     </div>
-                                    <br /><br />
+                                    <br /><br /><br /><br />
                                     <div className="final-form">
                                         <div class="input-file">
-                                            <label for="imagePreviewUrl" /*className="labels-form"*/ >
-                                                <input type="file" name="imagePreviewUrl" onChange={this.handleChangeFile} /*className="input-class"*/ />
+                                            <label for="imagePreviewUrl" /*className="labels-form"*/ >Chosse Image</label>
+                                                <input type="file" name="imagePreviewUrl" onChange={this.handleChangeFile} className="form-control" />
                                                 {/* <img src="/img/add-class2.png" alt="add-class" /> */}
                                                 {/* Cover Image */}
-                                            </label>
                                         </div>
                                         <br />
+                                        <label for="imagePreviewUrl" /*className="labels-form"*/ >Chosse Video</label>
                                         <div class="input-file">
                                             {/* <label for="videoUrl" className="labels-form"><img src="/img/add-class2.png" alt="add-class" />Video Lesson</label> */}
-                                            <input type="file" name="videoUrl" /*className="input-class"*/ onChange={this.handleChangeFile} />
+                                            <input type="file" name="videoUrl" className="form-control" onChange={this.handleChangeFile} />
                                         </div>
                                         <br></br><br />
                                         <button type="submit">

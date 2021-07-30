@@ -1,7 +1,8 @@
 import React from 'react';
 import { NavLink } from "react-router-dom";
 import { getAllLessons } from '../api';
-import "./Search.css";
+import "./MyLessons.css";
+import "./Search.css"
 
 
 class SearchPage extends React.Component {
@@ -39,32 +40,41 @@ class SearchPage extends React.Component {
     render() {
         const { searchResults, query } = this.state
         return (
-            <div className="container">
-                <h4 className="subtitles">Results of {query}</h4>
+            <div className="container upload-lesson body-mylessons body-search">
+                <br></br>
+                <h4 className="title">Results of {query}</h4>
                 {searchResults.length ? (
-                    <div>
-                        <div className="row justify-content-between">
-                            {searchResults.map(({ title, imagePreviewUrl, description, price, id }) => {
-                                return (
-                                    <div key={id} className="col-md-4">
-                                        <div className="card" >
-                                            <img className="card-img-top" src={imagePreviewUrl} alt={imagePreviewUrl} />
-                                            <div className="card-body">
-                                                <h5 className="card-title ">{title}</h5>
-                                                <p className="card-text">{description}</p>
-                                                {price !== 0 ? (<p>{price} €</p>) : (<p>FREE</p>)}
-                                                <NavLink to="/">
-                                                    <button >See more</button>
-                                                </NavLink>
+                    <div className="mylessons-section">
+                        <br></br>
+                        <div className="card-lesson container">
+                            <div className="row justify-content-between">
+                                {searchResults.map(({ title, imagePreviewUrl, description, level, price, _id }) => {
+                                    return (
+                                        <div key={_id} className="col-md-4">
+                                            <div className="card" >
+                                                <img className="card-img-top" src={imagePreviewUrl} alt={imagePreviewUrl} />
+                                                <div className="card-body">
+                                                    <h5 className="card-title subtitles">{title}</h5>
+                                                    <br />
+                                                    <p className="card-text">{level}</p>
+                                                    <br />
+                                                    <p className="card-text">{description}</p>
+                                                    <br />
+                                                    {price !== 0 ? (<p className="price">{price} €</p>) : (<p className="price">Free</p>)}
+                                                    <NavLink to={`/lesson-details/${_id}`}>
+                                                        <button className="button-class">See more</button>
+                                                    </NavLink>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                )
-                            })}
+                                    )
+                                })}
+                            </div>
                         </div>
                     </div>
-                ) : (<p>No search results</p>)}
+                ) : (<p className="title">No search results</p>)}
 
+                <br></br><br></br><br></br><br></br><br></br>
             </div>
         )
 
