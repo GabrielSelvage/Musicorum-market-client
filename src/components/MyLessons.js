@@ -2,8 +2,8 @@ import React from "react";
 import { NavLink, Redirect } from 'react-router-dom';
 import { Trash, Edit, Trash2 } from 'react-feather';
 import { getUser, loggedIn, getLesson } from "../api";
+import "./MyLessons.css";
 import "./AddLesson.css";
-import "./MyLessons.css"
 
 class MyLessons extends React.Component {
     state = {
@@ -33,7 +33,7 @@ class MyLessons extends React.Component {
         const { name, imageUrl } = this.state;
         return (
             <>
-                <div className="body-addlesson">
+                <div className="body-addlesson body-mylessons">
                     <div className="container pos-form">
                         <div className="upload-lesson">
                             <br /><br />
@@ -53,28 +53,32 @@ class MyLessons extends React.Component {
                                 <NavLink to="/add-lesson" className="title-profile smart-layers-pointers">UPLOAD LESSON</NavLink>
                                 <NavLink to="/lesson/:id/edit" className="title-profile smart-layers-pointers">EDIT LESSON</NavLink>
                             </div>
-                            <div className="form-section">
-                                <div className="mylessons-section">
-                                    {this.state.lessons.map(({ title, imagePreviewUrl, description, price, level }) => {
-                                        return (
-                                            <div className="col-md-4">
-                                                <div className="card-mylessons" >
-                                                    <img class="card-img-top" src={imagePreviewUrl} alt={imagePreviewUrl} />
-                                                    <div className="card-body">
-                                                        <h2>{title}</h2>
-                                                        <h5 className="card-title ">{level}</h5>
-                                                        <p className="card-text">{description}</p>
-                                                        {price !== 0 ? (<p>{price} €</p>) : (<p>"Free"</p>)}
-                                                        <NavLink to="/">
-                                                            <button >See more</button>
-                                                        </NavLink>
+                            <div className="mylessons-section">
+                                <div className="card-lesson container">
+                                    <div className="row justify-content-between">
+                                        {this.state.lessons.map(({ title, imagePreviewUrl, description, price, level, _id }) => {
+                                            return (
+                                                <div className="col-md-4">
+                                                    <div className="card" >
+                                                        <img className="card-img-top" src={imagePreviewUrl} alt={imagePreviewUrl} />
+                                                        <div className="card-body">
+                                                            <h5 className="card-title subtitles">{title}</h5>
+                                                            <br />
+                                                            <p className="card-text">{level}</p>
+                                                            <br />
+                                                            <p className="card-text">{description}</p>
+                                                            <br />
+                                                            {price !== 0 ? (<p className="price">{price} €</p>) : (<p className="price">Free</p>)}
+                                                            <br />
+                                                            <NavLink to={`/lesson-details/${_id}`}>
+                                                                <button className="button-class">See more</button>
+                                                            </NavLink>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        );
-                                    })}
-
-                                    <br></br><br></br><br></br><br></br><br></br>
+                                            );
+                                        })}
+                                    </div>
                                 </div>
 
                                 <br></br><br></br><br></br><br></br><br></br>

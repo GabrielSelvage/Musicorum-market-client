@@ -102,7 +102,6 @@
     position: absolute;
     top: 190px;
     width: 666px;
-    z-index: 1;
 }
 .ellipse2{
     background-color: transparent;
@@ -112,7 +111,6 @@
     position: absolute;
     top: -24px;
     width: 577px;
-    z-index: 1;
 }
 
 .login .row-login{

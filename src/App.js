@@ -21,7 +21,8 @@ import { loggedIn } from "./api";
 import MyLessons from "./components/MyLessons";
 import AccountSettings from "./components/AccountsSettings";
 import EditProfile from "./components/EditProfile";
-import { BeTeacher } from "./components/BeTeacher";
+import LessonDetails from "./components/LessonDetails";
+import { SingInContainer } from './components/containers/SingInContainer';
 
 
 class App extends React.Component {
@@ -55,10 +56,10 @@ class App extends React.Component {
           <Route exact path={["/", "/home"]} component={Home} />
           <Route exact path="/lessons" component={AllLessons} />
           <Route exact path="/instruments" component={Instruments} />
-          <Route exact path="/signup" component={Signup} />
-          <Route exact path="/beteacher" component={BeTeacher} />
           <Route exact path="/search" component={SearchPage} />
           <Route exact path="/shoppingCar" component={ShoppingCar} />
+          <Route exact path="/lesson-details/:id" component={LessonDetails} />
+          <Route exact path={"/signup"} component={SingInContainer} />
           <PrivateRoute exact path="/profile"
             render={(props) => {
               return <Profile {...props} loggedInUser={this.state.loggedInUser} />;

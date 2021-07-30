@@ -51,7 +51,7 @@ class EditProfile extends React.Component {
     await updateUser(updatedUser);
 
     toast.success("User updated");
-    this.props.history.push(`/profile/${this.state.id}`);
+    this.props.history.push(`/`);
   };
 
 

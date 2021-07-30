@@ -1,36 +1,64 @@
-.mylessons-section{
-    max-width: 745px !important;
-    margin-left: -20px;
-    border-style: none;
-    display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	align-items: center;
-	align-content: center;
+@font-face {
+    font-family: "Playfair" ;
+    src: url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 }
 
-.card-mylessons{
+.body-mylessons{
+    margin: 0;
+    padding: 0;
+    font-family: "Playfair" ;
+}
+
+.body-mylessons .mylessons-section{
+    min-width: 745px !important;
+    margin-left: -20px;
+    border-style: none;
+}
+
+.body-mylessons .mylessons-section .card{
+    max-height: 420px !important;
+    min-height: 420px !important;
+    width: 250px;
+    box-shadow: 1px 3px 14px 1px rgba(0,0,0,0.46);
+    border-radius: 18px;
+}
+
+.body-mylessons .mylessons-section .card-body{
+    display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	align-items: stretch;
+	align-content: stretch;
+}
+
+.body-mylessons .card-lesson{
     border: 0px solid black;  
     max-width: 18rem;
     padding-left: 15px;
     padding-right: 15px;
     padding-bottom: 15px;
+    max-height: 400px !important;
     display: flex;
 	flex-direction: column;
 	flex-wrap: nowrap;
 	justify-content: space-between;
 	align-items: center;
 	align-content: center;
-    margin: 20px;
 }
 
-.card-mylessons img{
+.body-mylessons .card-lesson img{
     max-width: 18rem;
-
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+    min-height: 200px;
+    max-height: 250px;
+    height: 200px;
+    width: auto;
+    object-fit: cover;
 }
 
-.subtitle-card-mylessons{
+.body-mylessons .mylessons-section .subtitle-card{
     display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
@@ -38,3 +66,55 @@
 	align-items: center;
 	align-content: center;
 }
+
+.body-mylessons .mylessons-section .subtitles{
+    background-color: transparent;
+    height: auto;
+    left: 0px;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    mix-blend-mode: normal;
+    text-align: left;
+    top: 0px;
+    width: auto;
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.body-mylessons .mylessons-section .card-title{
+    text-align: center;
+}
+
+.body-mylessons .mylessons-section .price{
+    text-align: left;
+}
+
+.body-mylessons .mylessons-section .card-text{
+    text-align: justify;
+}
+
+.body-mylessons .mylessons-section .justify-content-between{
+    min-width: 815px !important;
+    justify-content: space-evenly !important;
+    padding: 10px;
+}
+
+
+.body-mylessons .mylessons-section .button-class {
+    background-color: #00a692 !important;
+    border-radius: 6px;
+    height: 40px;
+    transition: all 0.2s ease;
+    width: 140px;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+  }
+  
+  .body-mylessons .mylessons-section .button-class:hover {
+    transform: scale(1.1);
+  }
+
+  .body-mylessons .mylessons-section .button-class {
+      border-style: none;
+  }

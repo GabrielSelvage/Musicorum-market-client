@@ -12,8 +12,12 @@ export const addLesson = (lesson) => {
   return axios.post(`${baseURL}/add-lesson`, lesson, { withCredentials: true });
 };
 
-export const getLesson = (userId) => {
-  return axios.get(`${baseURL}/lesson/${userId}`);
+export const getLesson = () => {
+  return axios.get(`${baseURL}/mylessons`, { withCredentials: true });
+};
+
+export const getLessonDetails = (lessonId) => {
+  return axios.get(`${baseURL}/lesson-details/${lessonId}`);
 };
 
 export const deleteLesson = (lessonId) => {
@@ -63,8 +67,8 @@ export const logout = () => {
   return axios.post(`${baseURL}/logout`, null, { withCredentials: true });
 };
 
-export const getUser = (userId) => {
-  return axios.get(`${baseURL}/profile/${userId}`, { withCredentials: true });
+export const getUser = () => {
+  return axios.get(`${baseURL}/profile`, { withCredentials: true });
 }
 
 export const updateUser = (updatedUser) => {

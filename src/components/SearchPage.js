@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink } from "react-router-dom";
 import { getAllLessons } from '../api';
+import "./Search.css";
 
 
 class SearchPage extends React.Component {
@@ -38,10 +39,10 @@ class SearchPage extends React.Component {
     render() {
         const { searchResults, query } = this.state
         return (
-            <>
-                <p>search for {query}</p>
+            <div className="container" style={{backgroundColor:"red"}}>
+                <h4 className="subtitles">Results of {query}</h4>
                 {searchResults.length ? (
-                    <div className="container">
+                    <div>
                         <div className="row justify-content-between">
                             {searchResults.map(({ title, imagePreviewUrl, description, price, id }) => {
                                 return (
@@ -64,7 +65,7 @@ class SearchPage extends React.Component {
                     </div>
                 ) : (<p>No search results</p>)}
 
-            </>
+            </div>
         )
 
     }

@@ -1,5 +1,6 @@
 import React from 'react';
-import { Avatar, Button, Grid, Paper, TextField, Typography, Link } from '@material-ui/core';
+import { Avatar, Button, Grid, Paper, TextField, Typography } from '@material-ui/core';
+import { Link } from "react-router-dom";
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import { Form, Formik, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
@@ -46,8 +47,7 @@ export const Login = ({ loggedInUser, setLoggedInUser }) => {
                         <div className="row-login">
                             <h2 className="title">Login</h2>
                             <Typography className="tip"> Do you have an account ?
-                                <Link className="a-login" href="#" >
-                                    {/* onClick={() => handleChange("event", 1)} */}
+                                <Link className="a-login" exact to="/signup" >
                                     Sign up
                                 </Link>
                             </Typography>

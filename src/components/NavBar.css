@@ -45,8 +45,7 @@
 }
 
 .body-navbar .teach-lessons{
-    color: #fff !important;
-    margin-left: 145px;
+    margin-left: 130px;
     text-decoration: none;
     margin-top: 13px;
     font-size: 13px;
@@ -104,6 +103,10 @@
     margin-left: 0px;
 }
 
+.body-navbar .dropdown-item {
+    z-index: 9999;
+}
+
 .body-navbar .dropdown-item.active, .body-navbar .dropdown-item:active {
     background-color: #00a692;
 }
@@ -117,12 +120,12 @@
 .body-navbar .search{
     border-style: none;
     margin-top: 20px;
-    margin-left: 415px;
+    margin-left: 400px;
     position: absolute;
 }
 
 .body-navbar .mr-sm-2, .body-navbar  .form-control {
-    width: 380px;
+    width: 330px;
     height: 42px;
     color: white;
     border-radius: 20px;
@@ -169,7 +172,7 @@
 
 .body-navbar .MuiSvgIcon-root {
     margin-top: -60px;
-    margin-right: 230px;
+    margin-right: 195px;
 }
 
 .body-navbar .logo{
@@ -197,13 +200,13 @@
 
 .body-navbar .login-user{
     color: white;
-    font-size: 30px !important;
+    font-size: 27px !important;
     margin-right: 0px;
     border-radius: 100%;
-    max-width: 30px !important;
-    max-height: 30px !important;
-    min-width: 30px;
-    min-height: 30px;
+    max-width: 27px !important;
+    max-height: 27px !important;
+    min-width: 27px;
+    min-height: 27px;
 }
 
 .body-navbar .login-user:hover{
@@ -216,13 +219,12 @@
 	flex-direction: column;
 	flex-wrap: nowrap;
 	justify-content: center;
-	align-items: center;
+	align-items: flex-start;
 	align-content: center;
     position: relative;
 }
 
 .body-navbar .icons{
-    margin-top: 20px;
     display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
@@ -300,4 +302,47 @@
     background-color: transparent;
     color: #00a692;
     border-style: none;
+}
+
+.body-navbar .selectLangDiv{
+    margin: 0 18px 0 0;
+}
+.body-navbar .selectLanguages{
+    color: #00a692 !important;
+    background-color: #262626;
+    border: none;
+    text-align-last:right;
+    font-family: "Playfair Display";
+}
+
+.body-navbar .selectLanguages select{
+    color: #00a692 !important;
+    background-color: #262626;
+    border: none;
+    text-align-last:right;
+    font-family: "Playfair Display";
+}
+
+
+.body-navbar select:focus {
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+} 
+
+.body-navbar .selectLanguages:after{
+    content: "" !important;
+    position: absolute !important;
+    right: 8px !important;
+    top: 50% !important;
+    margin-top: -4px !important;
+    border-top: 8px solid transparent !important;
+    border-left: 6px solid transparent !important;
+    border-right: 6px solid transparent !important;
+    pointer-events: none,
+    /* color: #00a692 !important;
+    background-color: #262626;
+    border: none;
+    text-align-last:right;
+    font-family: "Playfair Display"; */
 }

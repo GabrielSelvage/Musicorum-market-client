@@ -1,0 +1,272 @@
+@font-face {
+    font-family: "Playfair" ;
+    src: url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+}
+
+.body-detail{
+    margin: 0;
+    padding: 0;
+    font-family: "Playfair";
+}
+
+.body-detail .header-detail{
+    background-color: transparent;
+    height: 100px;
+    text-align: left;
+    display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: flex-start;
+	align-content: stretch;
+}
+
+.body-detail .title-detail{
+    background-color: transparent;
+    color: #262626;
+    font-size: 28px;
+    font-weight: 700;
+    height: auto;
+    left: 0px;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    mix-blend-mode: normal;
+    text-align: left;
+    top: 0px;
+    width: auto;
+}
+
+.body-detail .col-7{
+    box-shadow: 1px 3px 14px 1px rgba(0,0,0,0.46) !important;
+    border-radius: 18px !important;
+    width: 750px;
+    height: 440px;
+    padding: 10px;
+    background-color: black;
+}
+
+.body-detail .video-detail{
+    overflow: hidden;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.body-detail .card-detail{
+    background-color: var(--white);
+    border: 1px solid #a3a3a3;
+    border-radius: 6px;
+    height: 416px;
+    left: calc(50.00% + 287px);
+    mix-blend-mode: normal;
+    top: 205px;
+    width: 301px;
+    padding: 20px;
+    float: right !important;
+    position: fixed;
+}
+
+.body-detail .text-card-detail{
+    height: 200px;
+    display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: flex-start;
+	align-content: center;
+    text-align: left;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.body-detail .div-video{
+    background-color: #fff;
+    width: 750px;
+}
+
+.body-detail .row{
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: flex-start;
+	align-content: stretch;
+}
+
+.body-detail .purshase-detail{
+    background-color: transparent;
+    color: #f56565;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    height: auto;
+    left: 22px;
+    letter-spacing: 0.00px;
+    line-height: 40px;
+    mix-blend-mode: normal;
+    text-align: left;
+    top: 24px;
+    white-space: nowrap;
+    width: 261px;
+}
+
+.body-detail .title-small{
+    font-weight: 900;
+    font-size: 16px;
+    color: #262626;
+}
+
+.body-detail button{
+    border:none !important;
+    background-color: transparent !important;
+  }
+
+  .body-detail button:hover {
+    transform: scale(1.1);
+  }
+
+.body-detail .button-class {
+    background-color: #00a692 !important;
+    border-radius: 6px;
+    height: 40px;
+    transition: all 0.2s ease;
+    width: 240px;
+    color: white;
+    display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: stretch;
+  }
+
+  .body-detail .button-class2 {
+    background-color: #fff !important;
+    border-radius: 6px;
+    border: 1px solid #262626;
+    height: 40px;
+    transition: all 0.2s ease;
+    width: 240px;
+    color: #262626;
+    display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: stretch;
+    margin-top: -10px
+  }
+  
+
+  .body-detail .upload-button {
+    background-color: transparent;
+    color: #ffffff;
+    font-style: normal;
+    font-weight: 700;
+    text-align: center;
+    padding: 7px;
+  }
+
+  .body-detail .upload-button2 {
+    background-color: transparent;
+    color: #262626;
+    font-style: normal;
+    font-weight: 700;
+    text-align: center;
+    padding: 7px;;
+  }
+
+  .body-detail .section2{
+    background-color: transparent;
+    height: 67px;
+    left: calc(50.00% - 612px);
+    mix-blend-mode: normal;
+    top: calc(50.00% + 104px);
+    width: 704px;
+    text-align: left;
+    font-family: "Playfair";
+    border-top: 1px solid #a3a3a3;
+    border-bottom: 1px solid #a3a3a3;
+
+  }
+
+  .body-detail .description{
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: baseline;
+	align-content: stretch;
+    padding: 10px 10px 10px 0px;
+    font-family: "Playfair";
+  }
+
+  .body-detail .section2 img{
+    width: 100%;
+  }
+
+  .body-detail .text-description{
+    margin-left: 20px;
+    font-family: "Playfair";
+
+  }
+
+  .body-detail .profile-detail{
+    background-color: transparent;
+    height: auto;
+    left: calc(50.00% - 612px);
+    mix-blend-mode: normal;
+    top: calc(50.00% + 104px);
+    width: 704px;
+    text-align: left;
+    font-family: "Playfair";
+    border: 1px solid #a3a3a3;
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-content: stretch;
+    padding: 20px;
+    border-radius: 18px !important;
+  }
+
+  .body-detail .profile-detail img{
+    background-color: transparent;
+    height: 169px;
+    left: 0px;
+    mix-blend-mode: normal;
+    top: 0px;
+    width: 168px;
+    border-radius: 100%;
+  }
+
+  .body-detail .text-profile-detail{
+    font-family: "Playfair";
+  }
+
+  .body-detail .title-profile-detail{
+    background-color: transparent;
+    color: #f56565;
+    font-family: "Playfair";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    height: auto;
+    left: 208px;
+    letter-spacing: 0.00px;
+    line-height: 40px;
+    mix-blend-mode: normal;
+    text-align: left;
+    top: 24px;
+    white-space: nowrap;
+    width: 251px;
+  }
+
+  .body-detail .img-profile-detail{
+      width: 200px;
+  }
+
+  .body-detail .title-description{
+    width: 200px;
+    font-size: 18px !important;
+  }
+  

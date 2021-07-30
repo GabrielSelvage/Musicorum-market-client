@@ -75,7 +75,7 @@ class AddLesson extends React.Component {
         };
         await addLesson(newLesson);
         toast.success("Project created");
-        this.props.history.push(`/`);
+        this.props.history.push("/my-lessons");
     };
 
 

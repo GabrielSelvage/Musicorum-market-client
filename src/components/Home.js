@@ -1,7 +1,7 @@
 import React from 'react';
 import { Footer } from './Footer';
+import "./Home.css"
 import { NavLink } from "react-router-dom";
-import "./Home.css";
 
 export const Home = () => {
     return (
@@ -10,11 +10,14 @@ export const Home = () => {
             <div className="home">
                 <div className="buttons">
                     <div className="div-btn-student">
-                        <NavLink to="/signup" className="btn-student">Become a Student</NavLink>
+                        <NavLink to="/signup" className="btn-student">Become a Student</NavLink>                        
                     </div>
                     <div className="div-btn-teacher">
                         <br />
-                        <NavLink to="/beteacher" className="btn-teacher">Become a Teacher</NavLink>
+                        <NavLink className="btn-teacher" to={{
+                            pathname: '/signup',
+                            initialState: 1
+                        }}> Become a Teacher </NavLink>
                     </div>
                 </div>
             </div>
@@ -22,5 +25,6 @@ export const Home = () => {
             <br></br>
             <Footer className="footer-zindex" />
         </div>
+
     );
 }

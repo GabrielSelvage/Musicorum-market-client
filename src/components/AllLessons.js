@@ -113,13 +113,15 @@ class AllLessons extends React.Component {
                         <div className="words-lessons">
                             <br /><br />
                             <h4 className="subtitles">Lessons Type</h4>
-
+                            <br />
                             <div class="btn-lessons">
                                 <button name="all" className="btn-all" onClick={this.handleButtonChange} >All</button>
-                                <button name="payed" className="btn-all" onClick={this.handleButtonChange} >Payed</button>
-                                <button name="free" onClick={this.handleButtonChange} >Free</button>
+                                <button name="payed" className="btn-payed" onClick={this.handleButtonChange} >Payed</button>
+                                <button name="free" className="btn-free" onClick={this.handleButtonChange} >Free</button>
                             </div>
+                            <br /><br />
                             <h4 className="subtitles">Lessons Level</h4>
+                            <br />
                             <label>
                                 <input
                                     name="isBeginner"
@@ -127,8 +129,9 @@ class AllLessons extends React.Component {
                                     checked={this.state.isBeginner}
                                     onChange={this.handleCheckChange}
                                 />
-                                <span>Beginner</span>
+                                <span className="span-checkbox">Beginner</span>
                             </label>
+                            <br />
                             <label>
                                 <input
                                     name="isIntermediate"
@@ -136,8 +139,9 @@ class AllLessons extends React.Component {
                                     checked={this.state.isIntermediate}
                                     onChange={this.handleCheckChange}
                                 />
-                                <span>Intermediate</span>
+                                <span className="span-checkbox">Intermediate</span>
                             </label>
+                            <br />
                             <label>
                                 <input
                                     name="isAdvanced"
@@ -145,7 +149,7 @@ class AllLessons extends React.Component {
                                     checked={this.state.isAdvanced}
                                     onChange={this.handleCheckChange}
                                 />
-                                <span>Advanced</span>
+                                <span className="span-checkbox">Advanced</span>
                             </label>
 
                         </div>
@@ -155,19 +159,25 @@ class AllLessons extends React.Component {
                                 <div className="row justify-content-between">
                                     {this.state.lessons.map(({ title, imagePreviewUrl, description, price, level, _id }) => {
                                         return (
-                                            <div className="col-md-4">
-                                                <div className="card" >
-                                                    <img className="card-img-top" src={imagePreviewUrl} alt={imagePreviewUrl} />
-                                                    <div className="card-body">
-                                                        <h5 className="card-title ">{title}</h5>
-                                                        <p className="card-text">{description}</p>
-                                                        {price !== 0 ? (<p>{price} €</p>) : (<p>FREE</p>)}
-                                                        <NavLink to={`/lesson/${_id}`}>
-                                                            <button >See more</button>
-                                                        </NavLink>
+                                            <>
+                                                <div className="col-md-4">
+                                                    <div className="card" >
+                                                        <img className="card-img-top" src={imagePreviewUrl} alt={imagePreviewUrl} />
+                                                        <div className="card-body">
+                                                            <h5 className="card-title subtitles">{title}</h5>
+                                                            <br />
+                                                            <p className="card-text">{description}</p>
+                                                            <br />
+                                                            {price !== 0 ? (<p className="price">{price} €</p>) : (<p className="price">Free</p>)}
+                                                            <br /><br />
+                                                            <NavLink to={`/lesson-details/${_id}`}>
+                                                                <button className="button-class">See more</button>
+                                                            </NavLink>
+                                                        </div>
                                                     </div>
+                                                <br/><br/>
                                                 </div>
-                                            </div>
+                                            </>
                                         );
                                     })}
 

@@ -119,12 +119,21 @@
     border-style: none;
 }
 
+.body-alllessons .card{
+    max-height: 420px !important;
+    min-height: 420px !important;
+    width: 250px;
+    box-shadow: 1px 3px 14px 1px rgba(0,0,0,0.46);
+    border-radius: 18px;
+}
+
 .body-alllessons .card-lesson{
     border: 0px solid black;  
     max-width: 18rem;
     padding-left: 15px;
     padding-right: 15px;
     padding-bottom: 15px;
+    max-height: 400px !important;
     display: flex;
 	flex-direction: column;
 	flex-wrap: nowrap;
@@ -135,7 +144,13 @@
 
 .body-alllessons .card-lesson img{
     max-width: 18rem;
-
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+    min-height: 200px;
+    max-height: 250px;
+    height: 200px;
+    width: auto;
+    object-fit: cover;
 }
 
 .body-alllessons .subtitle-card{
@@ -147,9 +162,17 @@
 	align-content: center;
 }
 
-/* .body-alllessons .card-body{
+.body-alllessons .card-title{
+    text-align: center;
+}
 
-} */
+.body-alllessons .price{
+    text-align: left;
+}
+
+.body-alllessons .card-text{
+    text-align: left;
+}
 
 .body-alllessons .btn-lessons{
     background-color: transparent;
@@ -232,3 +255,29 @@
 .body-alllessons .span-checkbox{
     margin-left: 10px;
 }
+
+.body-alllessons .justify-content-between{
+    min-width: 815px !important;
+    justify-content: space-evenly !important;
+    padding: 10px;
+}
+
+
+.body-alllessons .button-class {
+    background-color: #00a692 !important;
+    border-radius: 6px;
+    height: 40px;
+    transition: all 0.2s ease;
+    width: 140px;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+  }
+  
+  .body-alllessons .button-class:hover {
+    transform: scale(1.1);
+  }
+
+  .body-alllessons .button-class {
+      border-style: none;
+  }

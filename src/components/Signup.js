@@ -4,12 +4,14 @@ import AddCircleOutlineOutlinedIcon from '@material-ui/icons/AddCircleOutlineOut
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
 import { Form, Formik, Field, ErrorMessage } from 'formik';
+import { useHistory } from "react-router-dom";
 import { FormHelperText } from '@material-ui/core';
 import * as Yup from 'yup';
 import { signup } from "../api";
 import './Signup.css';
 
 export const Signup = ({ handleChange }) => {
+    let history = useHistory();
     const initialValues = {
         name: '',
         email: '',
@@ -30,6 +32,7 @@ export const Signup = ({ handleChange }) => {
                 name,
                 role,
             });
+            history.push("/login");
         } catch (e) {
             console.log("error: ", e);
         }
@@ -37,35 +40,42 @@ export const Signup = ({ handleChange }) => {
         //handleChange("event", 0)
     };
     return (
-        <Grid className="signup">
-            <Paper id="paper_style">
-                <Grid align='center'>
-                    <Avatar id="avatar_style">
-                        <AddCircleOutlineOutlinedIcon />
-                    </Avatar>
-                    <h2 >Sign up</h2>
-                    <Typography variant='caption' gutterBottom>
-                        Please fill this form to create an account
-                    </Typography>
-                </Grid>
-                <Formik initialValues={initialValues} onSubmit={onSubmit} validationSchema={validationSchema}>
-                    {(props) => (
-                        <Form>
-                            <Field as={TextField} fullWidth name="name" label="Name" helperText={<ErrorMessage name="name" />} />
-                            <Field as={TextField} fullWidth name="email" label="Email" helperText={<ErrorMessage name="email" />} />
-                            <Field as={TextField} fullWidth name="password" label="Password" type="password" helperText={<ErrorMessage name="password" />} />
-                            <FormControlLabel
-                                control={<Field as={Checkbox} name="termsAndConditions" />}
-                                label="I accept the terms and conditions"
-                            />
-                            <FormHelperText><ErrorMessage name="termsAndConditions" /></FormHelperText>
-                            <Button className="btn-signup" type="submit" variant="contained" color="primary">
-                                {props.isSubmitting ? "Loading" : "Sing up"}
-                            </Button>
-                        </Form>
-                    )}
-                </Formik>
-            </Paper>
-        </Grid>
+        <>
+            <Grid className="body-signup">
+                <Paper id="paper_style" className="title-signup">
+                    <br/><br/>
+                    <Grid align='center'>
+                        <Avatar id="avatar_style" >
+                            <AddCircleOutlineOutlinedIcon />
+                        </Avatar>
+                        <h2 >Sign up</h2>
+                        <Typography variant='caption' gutterBottom>
+                            Please fill this form to create an account
+                        </Typography>
+                    </Grid>
+                    <Formik initialValues={initialValues} onSubmit={onSubmit} validationSchema={validationSchema}>
+                        {(props) => (
+                            <Form>
+                                <Field as={TextField} fullWidth name="name" label="Name" helperText={<ErrorMessage name="name" />} />
+                                <Field as={TextField} fullWidth name="email" label="Email" helperText={<ErrorMessage name="email" />} />
+                                <Field as={TextField} fullWidth name="password" label="Password" type="password" helperText={<ErrorMessage name="password" />} />
+                                <FormControlLabel
+                                    control={<Field as={Checkbox} name="termsAndConditions" />}
+                                    label="I accept the terms and conditions"
+                                />
+                                <FormHelperText><ErrorMessage name="termsAndConditions" /></FormHelperText>
+                                <Button className="btn-signup" type="submit" variant="contained" color="primary">
+                                    {props.isSubmitting ? "Loading" : "Sing up"}
+                                </Button>
+                            </Form>
+                        )}
+                    </Formik>
+                </Paper>
+            </Grid>
+            <div className="background-login">
+                <img className="ellipse1" src="/img/ellipse1.png" />
+                <img className="ellipse2" src="/img/ellipse2.png" />
+            </div>
+        </>
     )
 }
